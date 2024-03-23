@@ -69,19 +69,34 @@ div {
 }
 /* SLIDER ######################## */
 .imageshow-container {
-  max-width: 30vw;
+  display: flex;
+  justify-content: center;
+  max-width: 35vw;
   position: relative;
   margin: auto;
-  max-height: 30vw;
+  max-height: 35vw;
+  min-height: 35vw;
+  min-width: 35vw;
 }
 /* Hide the images by default  */
 .imageClass {
   display: none;
 }
 .imageClass img {
-  max-width: 20vw;
-  max-height: 20vw;
+  max-width: 30vw;
+  max-height: 30vw;
+  min-width: 30vw;
+  min-height: 30vw;
   border-radius: 24px;
+}
+.imageClass p {
+  margin: 0;
+  color: #414b52;
+}
+.name {
+  font-size: 500;
+  font-size: 2vw;
+  margin: 0;
 }
 
 /* Adding fading animation */
@@ -106,7 +121,7 @@ div {
   height: 2px;
   width: 15px;
   margin: 0 2px;
-  background-color: #1E9DFC;
+  background-color: #1e9dfc;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -115,7 +130,7 @@ div {
 .active,
 .dot:hover {
   height: 4px;
-  background-color: #FCA41E;
+  background-color: #fca41e;
 }
 .imageClass p {
   margin: 2vw;

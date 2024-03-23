@@ -24,4 +24,4 @@ setInterval(function () {
     currentIndex = 1;
   }
   currentImage(currentIndex);
-}, 3000);
+}, 4000);
