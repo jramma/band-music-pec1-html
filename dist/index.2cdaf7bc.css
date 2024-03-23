@@ -32,8 +32,12 @@ nav, footer {
   transition: padding 2s ease-in-out;
 }
 
-body.loaded nav, body.loaded footer {
+body.loaded nav {
   padding: 2rem;
+}
+
+body.loaded footer {
+  padding: 2rem 2rem 0;
 }
 
 nav {
@@ -80,6 +84,7 @@ h1 {
 footer {
   text-align: center;
   margin-top: auto;
+  padding-bottom: 0;
 }
 
 #copyright {
