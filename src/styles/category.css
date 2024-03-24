@@ -13,6 +13,7 @@
 }
 
 .category_content {
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,26 +26,17 @@ div {
 }
 
 .albums {
-  border-radius: 24px;
-  width: 90%;
-  min-height: 20vw;
-  margin: 1rem;
-}
-
-.info_cat {
-  width: 90%;
-  display: flex;
-  gap: 2vw;
-}
-
-.concerts {
-  background-color: lightyellow;
-  width: 90%;
-}
-
-.prensa {
-  background-color: lightpink;
-  width: 90%;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/fondo2.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 10vw;
+  margin: 0;
 }
 
 .anecdota1,
@@ -77,6 +69,8 @@ div {
   max-height: 35vw;
   min-height: 35vw;
   min-width: 35vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 /* Hide the images by default  */
 .imageClass {
@@ -91,7 +85,7 @@ div {
 }
 .imageClass p {
   margin: 0;
-  color: #414b52;
+  color: #ffffff;
 }
 .name {
   font-size: 500;
@@ -134,4 +128,127 @@ div {
 }
 .imageClass p {
   margin: 2vw;
+}
+/* ############ SECcion conciertos y tal */
+.info_cat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin: 0;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+.fila {
+  display: flex;
+  gap: 5vw;
+}
+.concert {
+  background-color: transparent;
+  display: flex;
+}
+.title_info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  h2 {
+    margin-left: 8vw;
+  }
+  a {
+    margin-right: 8vw;
+    color: #6f7c86;
+    font-style: bold;
+  }
+  a:hover {
+    text-decoration: underline 2px;
+    color: #6f7c86;
+    font-style: bold;
+  }
+}
+
+.day {
+  background-color: #414b52;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.month {
+  margin: 0;
+}
+.number {
+  margin: 0;
+  font-size: 3vw;
+  font-style: bold;
+  font-weight: 500;
+}
+.info_event {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+h2.city {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.info_event p {
+  margin: 0;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+.place {
+  color: #6f7c86;
+  font-style: bold;
+  font-weight: 700;
+}
+.prensa{
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/fondo2.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 10vw;
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.noticias{
+  box-sizing: border-box;
+  margin-top: 5vw;
+  background-color: #414b52;
+  width: 60%;
+  margin: 1vw;
+  padding: 5px;
+  border-radius: 24px;
+  bold{
+    font-style: bold;
+    font-weight: 600;
+  }
+  a{
+    color: #fca41e;
+  }a:hover{
+    text-decoration: underline 2px;
+    color: #fca41e;
+    cursor: pointer;
+  }
+}
+.articulo{
+  padding: 2vw;
+  width: 40%;
+  margin: 2vw;
+  width: 90%;
+  border-bottom:#ffffff 1px solid;
 }

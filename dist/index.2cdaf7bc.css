@@ -14,6 +14,7 @@
 
 body {
   box-sizing: border-box;
+  background-color: #000;
   flex-direction: column;
   height: 100vh;
   margin: 0;
@@ -41,6 +42,7 @@ body.loaded footer {
 }
 
 nav {
+  margin-bottom: 0;
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -146,5 +148,27 @@ button.sandwich-menu {
   color: #000;
   margin-bottom: 1rem;
   display: block;
+}
+
+#hueco {
+  z-index: 1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: #fff;
+  background-color: #0000;
+  background-image: linear-gradient(#00000080, #00000080), url("fondo2.6040c3f3.webp");
+  background-position: 0 0, center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover;
+  background-attachment: scroll, fixed;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  flex-direction: column;
+  align-items: center;
+  min-height: 10rem;
+  margin: 0;
+  display: flex;
+  position: relative;
 }
 /*# sourceMappingURL=index.2cdaf7bc.css.map */

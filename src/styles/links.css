@@ -1,0 +1,173 @@
+.roboto-mono-custom {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.urbanist-custom {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Urbanist", sans-serif;
+}
+
+/* #1E9DFC azul
+  #BD8D46 marron
+  #FCA41E naranja
+  #4C80A7 azul
+  #7D6A4D marron ++
+  #414B52 gris */
+
+nav,
+footer {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  transition: padding 2s ease-in-out;
+}
+body.loaded nav {
+  padding: 2rem;
+}
+body.loaded footer {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+nav {
+  margin-bottom: 0;
+}
+footer {
+  padding-bottom: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+h1 {
+  color: #fca41e;
+  font-size: 10vw;
+  font-style: bold;
+  font-family: "Urbanist", sans-serif;
+}
+
+.a-nav a {
+  margin-left: 2rem;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 0;
+}
+#copyright {
+  font-size: 0.9rem;
+}
+.a-nav {
+  display: block;
+}
+
+.sandwich-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .a-nav {
+    display: none;
+  }
+
+  .sandwich-menu {
+    display: block;
+  }
+}
+#copyright {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+button.sandwich-menu {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 5rem;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 2rem;
+  transition: 1s;
+}
+
+.mobile-menu a {
+  color: black;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+  padding: 10%;
+  text-align: left;
+  margin-left: 10%;
+}
+.text {
+  width: 30%;
+}
+
+nav, footer, #titulo {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+nav {
+    top: 0;
+}
+
+#titulo {
+    top: 50px; /* Ajusta este valor según la altura de tu nav */
+}
+
+footer {
+    bottom: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 0;
+    overflow: auto;
+    margin-top: 100px; /* Ajusta este valor según la altura de tu nav y #titulo */
+    margin-bottom: 50px; /* Ajusta este valor según la altura de tu footer */
+}
