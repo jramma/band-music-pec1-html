@@ -33,8 +33,14 @@
         <a href="index.html">Home</a>
       </div>
     </nav>
+    <nav class="category_nav">
+      <a href="#albums">Albums</a>
+      <a href="#de_gira">Gira</a>
+      <a href="#news">News</a>
+      <a href="#anecdotas">Anécdotas</a>
+    </nav>
     <div class="category_content">
-      <section class="albums">
+      <section id="albums" class="albums">
         <div class="imageshow-container">
           <div class="imageClass fade">
             <img src="./public/albums/img-1.jpg" style="width: 100%" />
@@ -96,7 +102,7 @@
           <span class="dot" onclick="currentImage(9)"></span>
         </div>
       </section>
-      <section class="info_cat">
+      <section id="de_gira" class="info_cat">
         <div class="title_info">
           <h2>De gira</h2>
           <div>
@@ -209,84 +215,100 @@
           </div>
         </div>
       </section>
-      <section class="prensa">
+      <section id="news" class="prensa">
         <div class="noticias">
           <div class="articulo">
-            <p>
-              <bold>
+            <div class="cabecera_art">
+              <img class="img_art" src="./public/fondo2.webp" alt="ellos" />
+              <h3 class="titulo_art">Un montón de amigos crean Badaddan</h3>
+            </div>
+            <div>
+              <p>Mar 17 de feb 23</p>
+              <p>
                 La nueva escuela y la vieja del drum and bass hacen migas para
                 crear lo que sin duda, incluso antes de su release ha sido el
                 track más pinchado en clubs y festivales del género
-              </bold>
-            </p>
-            <p>
-              Hoy los veteranos del drum and bass nos sorprenden con una nueva
-              colaboración. El dúo de UK siempre a la vanguardia pese al sonido
-              más underground dentro del drum and bass que a menudo trabajan
-              como es el jungle y una cosa muy importante, siempre poniendo su
-              nombre y peso en la escena al servicio de los nuevos talentos.
-              Como Bou en este caso, o Hedex que sabemos que tienen una
-              colaboración que saldrá dentro de poco... <a>[leer más]</a>
-            </p>
+                <a
+                  href="https://wololosound.com/lanzamientos/badaddan-bou-chase-status/"
+                  >[leer más]</a
+                >
+              </p>
+            </div>
           </div>
           <div class="articulo">
-            <p>
-              <bold>
-                La nueva escuela y la vieja del drum and bass hacen migas para
-                crear lo que sin duda, incluso antes de su release ha sido el
-                track más pinchado en clubs y festivales del género
-              </bold>
-            </p>
-            <p>
-              Hoy los veteranos del drum and bass nos sorprenden con una nueva
-              colaboración. El dúo de UK siempre a la vanguardia pese al sonido
-              más underground dentro del drum and bass que a menudo trabajan
-              como es el jungle y una cosa muy importante, siempre poniendo su
-              nombre y peso en la escena al servicio de los nuevos talentos.
-              Como Bou en este caso, o Hedex que sabemos que tienen una
-              colaboración que saldrá dentro de poco... <a>[leer más]</a>
-            </p>
+            <div class="cabecera_art">
+              <img class="img_art" src="./public/fondo2.webp" alt="ellos" />
+              <h3 class="titulo_art">Un montón de amigos crean Badaddan</h3>
+            </div>
+            <div>
+              <p>Mar 17 de feb 23</p>
+              <p>
+                <bold>
+                  La nueva escuela y la vieja del drum and bass hacen migas para
+                  crear lo que sin duda, incluso antes de su release ha sido el
+                  track más pinchado en clubs y festivales del género
+                </bold>
+              </p>
+            </div>
           </div>
           <div class="articulo">
-            <p>
-              <bold>
-                La nueva escuela y la vieja del drum and bass hacen migas para
-                crear lo que sin duda, incluso antes de su release ha sido el
-                track más pinchado en clubs y festivales del género
-              </bold>
-            </p>
-            <p>
-              Hoy los veteranos del drum and bass nos sorprenden con una nueva
-              colaboración. El dúo de UK siempre a la vanguardia pese al sonido
-              más underground dentro del drum and bass que a menudo trabajan
-              como es el jungle y una cosa muy importante, siempre poniendo su
-              nombre y peso en la escena al servicio de los nuevos talentos.
-              Como Bou en este caso, o Hedex que sabemos que tienen una
-              colaboración que saldrá dentro de poco... <a>[leer más]</a>
-            </p>
+            <div class="cabecera_art">
+              <img class="img_art" src="./public/fondo2.webp" alt="ellos" />
+              <h3 class="titulo_art">Un montón de amigos crean Badaddan</h3>
+            </div>
+            <div>
+              <p>Mar 17 de feb 23</p>
+              <p>
+                <bold>
+                  La nueva escuela y la vieja del drum and bass hacen migas para
+                  crear lo que sin duda, incluso antes de su release ha sido el
+                  track más pinchado en clubs y festivales del género
+                </bold>
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="anecdota1"></section>
-      <section class="anecdota2"></section>
-      <section class="anecdota3"></section>
-      <div class="see_more">
-        <section class="anecdota4"></section>
-        <section class="anecdota5"></section>
-        <section class="anecdota6"></section>
-      </div>
+      <section id="anecdotas">
+        <h2>Anecdotas</h2>
+        <div class="anecdota1">
+          <h3>Título anecdóta</h3>
+          <div class="flex">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+              eveniet nostrum illum laudantium provident perferendis tempore
+              quibusdam facilis aperiam odit natus libero, neque quasi modi
+              sapiente obcaecati cupiditate! Corrupti molestias, tempore
+              accusantium voluptatibus voluptatem ex dolor exercitationem est
+              illum iste?
+            </p>
+            <img src="./public/fondo2.webp" alt="ellos" />
+          </div>
+        </div>
+        <div class="anecdota1">
+          <h3>Título anecdóta</h3>
+          <div class="flex">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit
+              eveniet nostrum illum laudantium provident perferendis tempore
+              quibusdam facilis aperiam odit natus libero, neque quasi modi
+              sapiente obcaecati cupiditate! Corrupti molestias, tempore
+              accusantium voluptatibus voluptatem ex dolor exercitationem est
+              illum iste?
+            </p>
+            <img src="./public/fondo2.webp" alt="ellos" />
+          </div>
+        </div>
+      </section>
     </div>
-    <div id="hueco">
-
-    </div>
+    <div id="hueco"></div>
     <footer>
       <p>Chase & Status, Bou - Baddadan ft. IRAH, Flowdan, Trigga, Takura</p>
       <p id="copyright">
         Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
       </p>
     </footer>
-    <script src="./index.js"></script>
     <script src="./scripts/cat.js"></script>
   </body>
 </html>

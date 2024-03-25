@@ -200,7 +200,7 @@ button.sandwich-menu {
   background-clip: border-box, border-box;
   flex-direction: column;
   align-items: center;
-  min-height: 10rem;
+  min-height: 30vw;
   margin: 0;
   display: flex;
   position: relative;
