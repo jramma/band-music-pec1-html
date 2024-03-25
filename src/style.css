@@ -162,3 +162,6 @@ button.sandwich-menu {
   flex-direction: column;
   align-items: center;
 }
+.selected{
+  color:#fca41e;
+}

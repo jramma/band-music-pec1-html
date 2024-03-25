@@ -171,4 +171,8 @@ button.sandwich-menu {
   display: flex;
   position: relative;
 }
+
+.selected {
+  color: #fca41e;
+}
 /*# sourceMappingURL=index.2cdaf7bc.css.map */
