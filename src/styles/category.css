@@ -126,12 +126,24 @@ div {
   padding-bottom: 5vh;
   margin: 0;
   color: #ffffff;
-  align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .fila {
-  display: flex;
-  gap: 5vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .fila {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .fila {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .concert {
   background-color: transparent;
@@ -214,8 +226,13 @@ h2.city {
   width: 100%;
   justify-content: center;
 }
-
+.a-nav {
+  z-index: 2;
+}
 .category_nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   max-height: 1vw;
   a {
     margin: 1vw;
