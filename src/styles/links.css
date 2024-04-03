@@ -143,9 +143,7 @@ button.sandwich-menu {
   padding-bottom: 100vw;
   padding-top: 20vw;
 }
-.text {
-  width: 30%;
-}
+
 
 nav,
 footer,
@@ -184,6 +182,19 @@ footer {
   height: 1px;
   background-color: black;
 }
-.selected{
+.selected {
   color: #fca41e;
+}
+ol{
+  list-style-type: none;
+}
+#nick{
+  color: rgb(242, 55, 255);
+  transition: 1s;
+
+  &&:hover{
+    font-size: 4rem;
+    transition: 1s;
+    cursor: pointer;
+  }
 }

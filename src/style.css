@@ -58,16 +58,8 @@ a {
   color: white;
   text-decoration: none;
 }
-h1 {
+#title {
   transition: 1s;
-  color: #fca41e;
-  font-size: 10vw;
-  font-style: bold;
-  font-family: "Urbanist", sans-serif;
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-
   &:hover {
     transition: 1s;
     font-size: 12vw;
@@ -87,6 +79,15 @@ h1 {
     top: 50%; /* Coloca el triángulo en el centro verticalmente */
     transform: translate(-50%, -50%);
   }
+}
+h1 {
+  color: #fca41e;
+  font-size: 10vw;
+  font-style: bold;
+  font-family: "Urbanist", sans-serif;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
 }
 #canvas {
   position: absolute;
@@ -193,4 +194,7 @@ button.sandwich-menu {
 }
 .selected {
   color: #fca41e;
+}
+#main_body {
+  height: 100vh;
 }
