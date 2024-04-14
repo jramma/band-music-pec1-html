@@ -37,6 +37,12 @@ span {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  @media (max-width: 1020px) {
+      display: block;
+      .scroll-vertical{
+        margin-left: 5rem;
+      }
+  }
 }
 .scroll-vertical{
   max-height: 50vh;

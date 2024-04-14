@@ -62,6 +62,10 @@ h1 {
   font-size: 10vw;
   font-style: bold;
   font-family: "Urbanist", sans-serif;
+  @media (max-width: 618px) {
+    width: 100%;
+    background-color: black;
+  }
 }
 
 .a-nav a {
@@ -141,8 +145,10 @@ button.sandwich-menu {
   text-align: left;
   margin-left: 20%;
   padding-top: 40vh;
+  @media (max-width: 618px) {
+    margin-left: -4rem;
+  }
 }
-
 
 nav,
 footer,
@@ -170,8 +176,8 @@ footer {
   position: relative;
   z-index: 0;
   overflow: auto;
-  margin-top: 100px; 
-  margin-bottom: 50px; 
+  margin-top: 100px;
+  margin-bottom: 50px;
   a {
     color: rgb(242, 206, 250);
     text-decoration: none;
@@ -192,32 +198,31 @@ footer {
 .selected {
   color: #fca41e;
 }
-ol{
+ol {
   list-style-type: none;
 }
-#nick{
+#nick {
   color: rgb(242, 55, 255);
   transition: 1s;
 
-  &&:hover{
+  &&:hover {
     font-size: 4rem;
     transition: 1s;
     cursor: pointer;
   }
 }
-#copyright{
+#copyright {
   margin-bottom: 2rem;
 }
 .div_svg {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
-  gap:3rem;
+  gap: 3rem;
   img {
     height: 10vh;
     width: 10vh;
     transition: 1s;
-
   }
   img:hover {
     height: 11vh;
