@@ -73,13 +73,18 @@ div {
     min-height: 30vw;
     border-radius: 24px;
   }
-  p{
+  p {
     background-color: black;
     margin: 0;
     color: #fff;
     font-size: x-large;
     font-weight: bold;
     border-radius: 8px;
+  }
+  @media (max-width: 890px) {
+    p {
+      display: none;
+    }
   }
 }
 
@@ -137,21 +142,23 @@ div {
   color: #ffffff;
   justify-content: left;
 }
-.fila {
+.grid_gira {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-gap: 0;
 }
 
-@media (max-width: 700px) {
-  .fila {
+@media (max-width: 800px) {
+  .grid_gira {
+    grid-gap: 0;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .fila {
-    grid-template-columns: repeat(1, 1fr);
+  .grid_gira {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
   }
 }
 .concert {
@@ -161,26 +168,41 @@ div {
 .title_info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+
   h2 {
     margin-left: 8vw;
+    flex-grow: 1;
+    min-width: 20%;
   }
   a {
     margin-right: 8vw;
     color: #6f7c86;
-    font-style: bold;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
+
   a:hover {
     text-decoration: underline 2px;
     color: #6f7c86;
-    font-style: bold;
+    font-weight: bold;
+  }
+  @media (max-width: 500px) {
+    a {
+      display: none;
+    }
   }
 }
 
 .day {
   background-color: #414b52;
-  width: 6vw;
-  height: 6vw;
+  width: 5rem;
+  height: 5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -192,7 +214,6 @@ div {
 }
 .number {
   margin: 0;
-  font-size: 3vw;
   font-style: bold;
   font-weight: 500;
 }
@@ -203,12 +224,10 @@ div {
 }
 h2.city {
   margin: 0;
-  font-size: 2vw;
   font-weight: 500;
 }
 .info_event p {
   margin: 0;
-  font-size: 1.5vw;
   font-weight: 400;
 }
 .place {
@@ -216,6 +235,8 @@ h2.city {
   font-style: bold;
   font-weight: 700;
 }
+
+/* news */
 .prensa {
   position: relative;
   z-index: 1;
@@ -227,7 +248,7 @@ h2.city {
   background-size: cover;
   margin-bottom: 10vw;
   margin: 0;
-  color: black;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,8 +264,11 @@ h2.city {
   top: 0;
   z-index: 20;
   max-height: 1vw;
+  overflow: hidden;
   a {
     margin: 1vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   :hover {
     color: #fca41e;
@@ -255,8 +279,8 @@ h2.city {
   box-sizing: border-box;
   margin-top: 20vw;
   margin-bottom: 20vw;
-  background-color: #ffffff;
-  border-top: #000000 1vw solid;
+  background-color: black;
+  border-top: #fca41e 1vw solid;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -272,14 +296,18 @@ h2.city {
     color: #fca41e;
     cursor: pointer;
   }
+  @media (max-width: 922px) {
+    grid-template-columns: 1fr;
+    .articulo {
+      max-width: 70%;
+    }
+  }
 }
 
 .articulo {
-  width: 40vw;
-  border-bottom: #000000 1px solid;
+  border-bottom: #fff 1px solid;
   padding: 1vw;
   align-items: center;
-  border-right: #000000 1px solid;
   padding: 1vw;
   margin: 4vw;
   p {
@@ -313,8 +341,13 @@ h2.city {
   width: 100%;
   object-fit: cover;
   filter: blur(1px);
+  border-radius: 24px;
 }
+
 #anecdotas {
+  
+  height: 70vh;
+  overflow-y: auto;
   h2 {
     color: #fca41e;
   }
@@ -327,14 +360,24 @@ h2.city {
     max-width: 25vw;
   }
   img {
-    width: 10vw;
-    height: 10vw;
-    margin-left: 4vw;
-    border-radius: 2vw;
+    width: 8rem;
+    height: 8rem;
+    margin: 4vw;
+    border-radius: 1rem;
+    object-fit: cover;
   }
-}
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    
+  }
+  @media (max-width: 720px) {
+    .flex {
+      display: block;
+    }
+  }
 }

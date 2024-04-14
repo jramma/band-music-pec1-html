@@ -91,7 +91,7 @@ h1 {
 }
 #canvas {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1;
   pointer-events: none;
@@ -197,4 +197,7 @@ button.sandwich-menu {
 }
 #main_body {
   height: 100vh;
+}
+#copyright{
+  margin-bottom: 2rem;
 }
