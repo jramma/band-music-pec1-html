@@ -57,16 +57,7 @@ a {
   color: white;
   text-decoration: none;
 }
-h1 {
-  color: #fca41e;
-  font-size: 10vw;
-  font-style: bold;
-  font-family: "Urbanist", sans-serif;
-  @media (max-width: 618px) {
-    width: 100%;
-    background-color: black;
-  }
-}
+
 
 .a-nav a {
   margin-left: 2rem;
@@ -157,6 +148,7 @@ footer,
   position: fixed;
   z-index: 1;
   box-sizing: border-box;
+  z-index: 20;
 }
 
 nav {
@@ -164,6 +156,15 @@ nav {
 }
 
 #titulo {
+  margin-bottom: -26rem;
+  color: #fca41e;
+  font-size: 10vw;
+  font-style: bold;
+  font-family: "Urbanist", sans-serif;
+  @media (max-width: 618px) {
+    position: relative;
+   
+  }
   top: 50px;
   margin-left: 1vw;
 }
