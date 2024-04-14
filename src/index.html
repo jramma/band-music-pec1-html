@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DnB</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./public/icon/favicon.svg" />
@@ -33,7 +33,7 @@
         <a href="index.html">Home</a>
       </div>
     </nav>
-    <div  class="main_content">
+    <div class="main_content">
       <h1 id="title">Baddadan</h1>
       <canvas id="canvas"></canvas>
       <audio id="audio" src="./public/sound/music.mp3"></audio>
@@ -45,5 +45,15 @@
       </p>
     </footer>
     <script src="./scripts/index.js"></script>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
