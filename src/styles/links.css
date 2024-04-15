@@ -137,6 +137,7 @@ button.sandwich-menu {
   margin-left: 20%;
   padding-top: 40vh;
   @media (max-width: 618px) {
+    padding-top: 4vh;
     margin-left: -4rem;
   }
 }
@@ -162,8 +163,7 @@ nav {
   font-style: bold;
   font-family: "Urbanist", sans-serif;
   @media (max-width: 618px) {
-    position: relative;
-   
+    display: none;
   }
   top: 50px;
   margin-left: 1vw;
