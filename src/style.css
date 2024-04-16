@@ -1,3 +1,10 @@
+
+/* ESTE STYLE CSS AFECTA A TODOS LOS HTML MENOS A LINKS
+SON CSS GENERICOS PARA TODA LA PÁGINA, COSAS QUE TIENEN QUE
+CUMPLIR EN TODA LA WEB... FONDO, COLOR LETRAS, FUENTES,ETC */
+
+/* he usado sass para hacerlo más intuitivo el css,
+ya que te permite poner css a cosas que estan dentro de la primera */
 .roboto-mono-custom {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
