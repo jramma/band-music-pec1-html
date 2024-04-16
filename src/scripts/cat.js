@@ -12,30 +12,21 @@ window.toggleMenu = function() {
     }
 }
 
-var currentIndex = 1;
-
-function currentImage(n) {
-  var i;
-  var images = document.getElementsByClassName("imageClass");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  images[n - 1].style.display = "block";
-  dots[n - 1].className += " active";
-}
-
-// Display the initial image
-currentImage(currentIndex);
-
-// Change to the next image every 3 seconds
-setInterval(function () {
-  currentIndex++;
-  if (currentIndex > document.getElementsByClassName("imageClass").length) {
-    currentIndex = 1;
-  }
-  currentImage(currentIndex);
-}, 4000);
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  effect:"cards",
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

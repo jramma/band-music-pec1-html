@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/category.css" />
     <link rel="icon" href="./public/icon/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <nav>
@@ -42,66 +47,59 @@
     </nav>
     <div class="category_content">
       <section id="albums" class="albums">
-        <div class="imageshow-container">
-          <div class="imageClass fade">
-            <img src="./public/albums/img-1.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">2 RUFF, Vol. 1</p>
-            <p style="text-align: center">2023</p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./public/albums/img-1.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">2 RUFF, Vol. 1</p>
+              <p style="text-align: center">2023</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-2.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">What Came Before</p>
+              <p style="text-align: center">2022</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-3.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">fabric presents</p>
+              <p style="text-align: center">2020</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-4.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">RTRN II JUNGLE</p>
+              <p style="text-align: center">2019</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-5.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">Tribe</p>
+              <p style="text-align: center">2017</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-6.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">Brand New Machine</p>
+              <p style="text-align: center">2013</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-7.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">Live At Brixton</p>
+              <p style="text-align: center">2012</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-8.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">No More Idols</p>
+              <p style="text-align: center">2011</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/albums/img-9.jpg" style="width: 100%" />
+              <p style="text-align: center" class="name">More Than Alot</p>
+              <p style="text-align: center">2008</p>
+            </div>
           </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-2.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">What Came Before</p>
-            <p style="text-align: center">2022</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-3.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">fabric presents</p>
-            <p style="text-align: center">2020</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-4.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">RTRN II JUNGLE</p>
-            <p style="text-align: center">2019</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-5.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">Tribe</p>
-            <p style="text-align: center">2017</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-6.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">Brand New Machine</p>
-            <p style="text-align: center">2013</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-7.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">Live At Brixton</p>
-            <p style="text-align: center">2012</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-8.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">No More Idols</p>
-            <p style="text-align: center">2011</p>
-          </div>
-          <div class="imageClass fade">
-            <img src="./public/albums/img-9.jpg" style="width: 100%" />
-            <p style="text-align: center" class="name">More Than Alot</p>
-            <p style="text-align: center">2008</p>
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-
-        <!-- The dots/circles for navigation -->
-        <div style="text-align: center">
-          <span class="dot" onclick="currentImage(1)"></span>
-          <span class="dot" onclick="currentImage(2)"></span>
-          <span class="dot" onclick="currentImage(3)"></span>
-          <span class="dot" onclick="currentImage(4)"></span>
-          <span class="dot" onclick="currentImage(5)"></span>
-          <span class="dot" onclick="currentImage(6)"></span>
-          <span class="dot" onclick="currentImage(7)"></span>
-          <span class="dot" onclick="currentImage(8)"></span>
-          <span class="dot" onclick="currentImage(9)"></span>
-        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </section>
       <section id="de_gira" class="info_cat">
         <div class="title_info">

@@ -45,19 +45,50 @@ div {
   background-color: lightcoral;
   width: 90%;
 }
-
+.swiper-button-next {
+  border-color: #fff;
+}
+.swiper-button-prev {
+  color: white;
+}
+.swiper-pagination {
+  color: white;
+}
 /* SLIDER ######################## */
-.imageshow-container {
+.swiper {
+  width: 20%;
+  height: 20%;
+}
+
+.swiper-slide {
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
   justify-content: center;
-  max-width: 35vw;
-  position: relative;
-  margin: auto;
-  max-height: 35vw;
-  min-height: 35vw;
-  min-width: 35vw;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+}
+
+.swiper-slide img {
+  border-radius: 2rem;
+  display: block;
+  object-fit: cover;
+  max-height: 16rem;
+}
+.swiper-button-next{
+  color: white;
+
+}
+.swiper-button-prev{
+  color: white;
+
+}
+.swiper-pagination{
+  color: white;
+
 }
 /* Hide the images by default  */
 .imageClass {
@@ -345,7 +376,6 @@ h2.city {
 }
 
 #anecdotas {
-  
   height: 70vh;
   overflow-y: auto;
   h2 {
@@ -373,7 +403,6 @@ h2.city {
   }
   @media (max-width: 900px) {
     width: 100%;
-    
   }
   @media (max-width: 720px) {
     .flex {

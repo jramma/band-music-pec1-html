@@ -6,9 +6,9 @@
   "license": "ISC",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "dev": "parcel src/index.html --port 3000",
+    "dev": "parcel src/index.html --port 3333",
     "pro": "parcel build src/index.html",
-    "start": "parcel --port 3000",
+    "start": "parcel --port 3333",
     "build": "parcel build"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "swiper": "^11.1.1"
   }
 }
