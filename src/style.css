@@ -124,6 +124,12 @@ footer {
   text-align: center;
   padding-bottom: 0;
   z-index: 1;
+  a{
+    color: pink;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 #copyright {
   font-size: 0.9rem;

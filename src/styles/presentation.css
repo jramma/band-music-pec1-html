@@ -34,7 +34,6 @@ span {
 
 .content_pres{
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 3rem;
   @media (max-width: 1020px) {
@@ -45,6 +44,7 @@ span {
   }
 }
 .scroll-vertical{
+  margin-top: 6rem;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   max-height: 65vh;
