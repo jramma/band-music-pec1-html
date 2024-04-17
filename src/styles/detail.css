@@ -14,6 +14,8 @@
   flex-direction: column;
   align-items: center;
 }
+/* Esto es porque la rotación de video nos 
+crea un overflow x que no queremos */
 body{
   overflow-x: hidden ;
 }

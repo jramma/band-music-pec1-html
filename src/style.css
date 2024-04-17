@@ -44,7 +44,7 @@ footer {
   color: white;
   margin: 0;
   padding: 0;
-  transition: padding 2s ease-in-out;
+  transition: padding 0.8s ease-in-out;
 }
 body.loaded nav {
   padding: 2rem;
@@ -66,15 +66,15 @@ a {
   text-decoration: none;
 }
 #title {
-  transition: 1s;
+  transition: 0.5s;
   &:hover {
-    transition: 1s;
+    transition: 0.5s;
     font-size: 12vw;
     cursor: pointer;
     z-index: 2;
   }
   &:hover:after {
-    transition: 1s;
+    transition: 0.8s;
     content: "";
     position: absolute;
     width: 0;
@@ -175,7 +175,7 @@ button.sandwich-menu {
   font-weight: 600;
   font-style: bold;
   font-size: 2rem;
-  transition: 1s;
+  transition: 0.8s;
 }
 
 .mobile-menu a {
