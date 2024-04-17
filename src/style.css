@@ -208,3 +208,22 @@ button.sandwich-menu {
 #copyright{
   margin-bottom: 2rem;
 }
+
+.blurry-div {
+  position: sticky;
+  top: 0;
+  padding-top: 0;
+  width: 100%;
+  height: 5rem; /* Ajusta esto a la altura que desees */
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente de negro 100% opaco a transparente */
+  z-index: 1;
+}
+.blurry-div2 {
+  position: sticky;
+  bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  height: 5rem; /* Ajusta esto a la altura que desees */
+  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradiente de negro 100% opaco a transparente */
+  z-index: 1;
+}

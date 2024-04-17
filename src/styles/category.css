@@ -54,12 +54,15 @@ div {
 .swiper-pagination {
   color: white;
 }
-/* SLIDER ######################## */
+/* Swiper ######################## */
 .swiper {
-  width: 20%;
-  height: 20%;
+  margin-top: 2rem;
+  width: 16rem;
+  height: 22rem;
+  margin-bottom: 4rem;
 }
-
+/* Importante medidas rem para que no se deformen las imagenes
+al hacer la pantalla más pequeña */
 .swiper-slide {
   border-radius: 2rem;
   text-align: center;
@@ -71,97 +74,45 @@ div {
   width: 8rem;
   height: 8rem;
 }
-
 .swiper-slide img {
   border-radius: 2rem;
   display: block;
   object-fit: cover;
   max-height: 16rem;
 }
-.swiper-button-next{
-  color: white;
-
-}
-.swiper-button-prev{
-  color: white;
-
-}
-.swiper-pagination{
-  color: white;
-
-}
-/* Hide the images by default  */
-.imageClass {
-  border-radius: 12px;
-  display: none;
-  background-color: #ffffff;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  img {
-    max-width: 30vw;
-    max-height: 30vw;
-    min-width: 30vw;
-    min-height: 30vw;
-    border-radius: 24px;
-  }
-  p {
-    background-color: black;
-    margin: 0;
-    color: #fff;
-    font-size: x-large;
-    font-weight: bold;
-    border-radius: 8px;
-  }
+/* Desaparecer las flechas en pantallas pequeñas
+porque suelen ser táctiles: */
+#navigation {
+  z-index: 50;
+  background-color: red;
+  position: absolute;
+  display: flex;
+  top:10rem;
+  left: -8rem;
+  justify-content: space-between;
+  width: 200%; /* Asegúrate de que el contenedor se extienda a lo largo de todo el ancho */
   @media (max-width: 890px) {
-    p {
-      display: none;
-    }
+    display: none;
+  }
+  img{
+    height: 4rem;
+    width: 4rem;
+  }&:hover{
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+  }
+  .button-prev{
+    transform: rotate(180deg);
   }
 }
-
 .name {
   font-size: 500;
-  font-size: 2vw;
+  font-size: 1.5rem;
   margin: 0;
 }
 
-/* Adding fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* Defining the dot styles */
-.dot {
-  cursor: pointer;
-  height: 2px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #1e9dfc;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Setting a different style for hovering and active */
-.active,
-.dot:hover {
-  height: 4px;
-  background-color: #fca41e;
-}
-.imageClass p {
-  margin: 2vw;
-}
-/* ############ SECcion conciertos y tal */
+/* ############ Seccion conciertos de gira */
 .info_cat {
   width: 100%;
   display: flex;
@@ -178,7 +129,7 @@ div {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0;
 }
-
+/* grid responsive */
 @media (max-width: 800px) {
   .grid_gira {
     grid-gap: 0;
@@ -374,10 +325,18 @@ h2.city {
   filter: blur(1px);
   border-radius: 24px;
 }
-
+/* Anecdotas */
 #anecdotas {
+  
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
   height: 70vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
   h2 {
     color: #fca41e;
   }
