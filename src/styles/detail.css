@@ -14,6 +14,9 @@
   flex-direction: column;
   align-items: center;
 }
+body{
+  overflow-x: hidden ;
+}
 section {
   width: 100%;
 }

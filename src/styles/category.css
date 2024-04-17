@@ -84,7 +84,6 @@ al hacer la pantalla más pequeña */
 porque suelen ser táctiles: */
 #navigation {
   z-index: 50;
-  background-color: red;
   position: absolute;
   display: flex;
   top:10rem;
@@ -98,8 +97,7 @@ porque suelen ser táctiles: */
     height: 4rem;
     width: 4rem;
   }&:hover{
-    height: 4rem;
-    width: 4rem;
+    
     cursor: pointer;
   }
   .button-prev{
