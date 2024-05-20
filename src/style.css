@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ESTE STYLE CSS AFECTA A TODOS LOS HTML MENOS A LINKS
 SON CSS GENERICOS PARA TODA LA PÁGINA, COSAS QUE TIENEN QUE
