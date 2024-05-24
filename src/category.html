@@ -51,7 +51,9 @@
     </header>
     <!-- Nav sticky -->
     <nav class="bg-black w-full fixed z-30" id="nav">
-      <div class="container flex flex-row gap-12 text-cyan-200 font-light text-xl">
+      <div
+        class="container flex flex-row gap-12 text-cyan-200 font-light text-xl"
+      >
         <a href="#info">Chase & Status</a>
         <a href="#albums">Albúms</a>
         <a href="#concert">Conciertos</a>
@@ -60,50 +62,51 @@
       </div>
     </nav>
 
-    <section id="info" class="w-full bg-black-1 py-24">
-      <div class="container flex flex-col justify-center text-white">
-        <div class="box"></div>
-        <h2 class="font-roboto-mono self-center">¿Quién es Chase & status?</h2>
-        <div class="box"></div>
-        <div
-          class="container flex flex-col md:flex-row items-center justify-center py-12 gap-12"
-        >
-          <div class="max-w-96 font-light flex flex-col gap-2">
-            <p class="text-2xl text-orange font-roboto-mono">Chase & Status</p>
-            <p>
-              Chase & Status es un grupo británico de música electrónica
-              producida por Saul Milton (Chase) y Will Kennard (Status).
-              Actualmente, MC Rage & Andy Gangadeen también componen la banda.
-              El dúo de Londres, y se formó en 2003 después de conocerse en la
-              universidad en Manchester. El grupo desde entonces ha lanzado tres
-              discos, además de colaborar con los principales artistas de la
-              talla de Plan B, Cee Lo Green, Rihanna, Example y Tinie Tempah.
-            </p>
-            <a
-              class="text-blue-500 font-semibold"
-              href="https://es.wikipedia.org/wiki/Chase_%26_Status"
-            >
-              Entrada wikipedia.
-            </a>
-          </div>
-          <picture
-            class="transition-all duration-500 ease-in-out transform hover:scale-105 self-center"
+    <section
+      id="info"
+      class="w-full bg-black-1 py-24 flex flex-col justify-center items-center text-white"
+    >
+      <div class="box w-3/4"></div>
+      <h2 class="font-roboto-mono self-center">¿Quién es Chase & status?</h2>
+      <div class="box w-3/4"></div>
+      <div
+        class="container flex flex-col md:flex-row items-center justify-center py-12 gap-2"
+      >
+        <div class="max-w-96 font-light flex flex-col gap-2 w-1/2">
+          <p class="text-2xl text-orange font-roboto-mono">Chase & Status</p>
+          <p>
+            Chase & Status es un grupo británico de música electrónica producida
+            por Saul Milton (Chase) y Will Kennard (Status). Actualmente, MC
+            Rage & Andy Gangadeen también componen la banda. El dúo de Londres,
+            y se formó en 2003 después de conocerse en la universidad en
+            Manchester. El grupo desde entonces ha lanzado tres discos, además
+            de colaborar con los principales artistas de la talla de Plan B, Cee
+            Lo Green, Rihanna, Example y Tinie Tempah.
+          </p>
+          <a
+            class="text-blue-500 font-semibold"
+            href="https://es.wikipedia.org/wiki/Chase_%26_Status"
           >
-            <source
-              media="(min-width: 1200px)"
-              srcset="./public/principal1.webp"
-            />
-            <source
-              media="(min-width: 900px)"
-              srcset="./public/principal2.webp"
-            />
-            <img
-              class="aspect-video max-h-72 object-cover self-center"
-              src="./public/principal.webp"
-              alt="Chase and straus artists"
-            />
-          </picture>
+            Entrada wikipedia.
+          </a>
         </div>
+        <picture
+          class="w-1/2 transition-all flex justify-center items-center duration-500 ease-in-out transform hover:scale-125 self-center"
+        >
+          <source
+            media="(min-width: 1200px)"
+            srcset="./public/principal1.webp"
+          />
+          <source
+            media="(min-width: 900px)"
+            srcset="./public/principal2.webp"
+          />
+          <img
+            class="aspect-square w-1/2 object-cover self-center rounded-full"
+            src="./public/principal.webp"
+            alt="Chase and straus artists"
+          />
+        </picture>
       </div>
     </section>
     <!-- SECCION ALBUMES CON SWIPER -->
@@ -167,7 +170,7 @@
 
     <!-- SECCION DE GIRA -->
     <section
-    id="concert"
+      id="concert"
       class="w-full bg-black text-white flex flex-col items-center py-10 md:py-20"
     >
       <div class="container flex flex-col items-center">
@@ -292,7 +295,7 @@
 
     <!-- SECCION NOTICIAS -->
     <section
-    id="news"
+      id="news"
       class="bg-black-1 p-0 w-full flex flex-col items-center text-white py-10 sm:py-20"
     >
       <div class="container">
@@ -353,14 +356,14 @@
 
     <!-- SECCION Anecdotas -->
     <section
-    id="anecdota"
+      id="anecdota"
       class="bg-black text-white w-full flex flex-col items-center py-10 sm:py-20"
     >
-      <div class="container">
-        <h2 class="text-4xl text-orange font-urbanist self-start">Anécdotas</h2>
+      <div class="container py-6">
+        <h2 class="text-4xl text-orange font-urbanist self-start underline">Anécdotas</h2>
       </div>
       <div class="container flex flex-col items-center gap-12">
-        <div class="lg:w-1/2 flex flex-col">
+        <div class="xl:w-1/2 flex flex-col">
           <h3 class="text-orange font-semibold font-2xl">
             El concierto inesperado
           </h3>
@@ -378,7 +381,7 @@
             </p>
           </div>
         </div>
-        <div class="lg:w-1/2 flex flex-col">
+        <div class="xl:w-1/2 flex flex-col">
           <h3 class="text-orange font-semibold font-2xl">El fan sorpresa</h3>
           <div class="flex gap-12 sm:flex-row flex-col">
             <p class="font-extralight">
@@ -394,7 +397,7 @@
             />
           </div>
         </div>
-        <div class="lg:w-1/2 flex flex-col">
+        <div class="xl:w-1/2 flex flex-col">
           <h3 class="text-orange font-semibold font-2xl">
             El encuentro con un ídolo
           </h3>
@@ -412,7 +415,7 @@
             </p>
           </div>
         </div>
-        <div class="lg:w-1/2 flex flex-col">
+        <div class="xl:w-1/2 flex flex-col">
           <h3 class="text-orange font-semibold font-2xl">
             La canción olvidada
           </h3>
@@ -450,7 +453,7 @@
             href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
           >
             Listen on Spotify
-            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+            <img class="text-white animate-bounce" src="./public/icon/zelda.svg" alt="Logo" />
           </a>
           <div class="flex flex-row items-center max-h-2 gap-8">
             <a href="/">Chase & Status</a>

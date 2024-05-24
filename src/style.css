@@ -314,3 +314,60 @@ porque suelen ser táctiles: */
   text-align: center;
   height: 2vw;
 }
+/* Definición de la animación 'spin' */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Inicia la rotación desde 0 grados */
+  }
+  100% {
+    transform: rotate(360deg); /* Termina la rotación en 360 grados */
+  }
+}
+
+/* Definición de la animación 'ping' */
+@keyframes ping {
+  0% {
+    transform: scale(1); /* Inicia la escala en 1 (tamaño normal) */
+    opacity: 1; /* Inicia la opacidad en 1 (completamente visible) */
+  }
+  75%,
+  100% {
+    transform: scale(2); /* Termina la escala en 2 (doble del tamaño normal) */
+    opacity: 0; /* Termina la opacidad en 0 (completamente transparente) */
+  }
+}
+
+/* Definición de la animación 'bounce' */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0); /* Inicia y termina la traslación en 0 (posición original) */
+  }
+  50% {
+    transform: translateY(-20px); /* A la mitad de la animación, traslada el elemento 20px hacia arriba */
+  }
+}
+
+/* Definición de las clases para las animaciones */
+.animacion_ejercicio {
+  /* Definición de la clase 'img-size' */
+  .img-size {
+    width: 20%; /* Establece el ancho de la imagen al 20% del contenedor */
+    height: auto; /* Establece la altura de la imagen automáticamente para mantener las proporciones */
+  }
+
+  /* Definición de la clase 'animacion-spin' */
+  .animacion-spin {
+    animation: spin 4s linear infinite; /* Aplica la animación 'spin' con una duración de 4 segundos, una función de tiempo lineal y una repetición infinita */
+  }
+
+  /* Definición de la clase 'animacion-ping' */
+  .animacion-ping {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite; /* Aplica la animación 'ping' con una duración de 3 segundos, una función de tiempo definida por una curva Bézier cúbica y una repetición infinita */
+  }
+
+  /* Definición de la clase 'animacion-bounce' */
+  .animacion-bounce {
+    animation: bounce 2s ease infinite; /* Aplica la animación 'bounce' con una duración de 2 segundos, una función de tiempo 'ease' (aceleración suave) y una repetición infinita */
+  }
+}

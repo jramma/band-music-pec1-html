@@ -45,9 +45,9 @@
     </header>
     <!-- PARALLAX -->
     <div
-      class="parallax w-full h-96 flex justify-center items-end relative border-solid border-b-2 border-orange"
+      class="parallax w-full h-96 flex justify-center items-end relative border-solid border-b-2 border-orange p-0"
     >
-      <h1 class="-bottom-14">Presentation</h1>
+      <h1 class="bottom-0 p-0 leading-[7vw]">Presentation</h1>
     </div>
     <!-- Contenido -->
     <section class="w-full bg-gray">
@@ -67,7 +67,8 @@
               <span><a href="https://unsplash.com/es">UNSPLASH</a></span>
             </p>
             <p>
-              Cualquier comentario es bienvenido: <span>jrammas@uoc.edu</span>
+              Cualquier comentario es bienvenido:<br />
+              <span>jrammas@uoc.edu</span>
             </p>
             <p>
               También puedes ver el código en
@@ -106,24 +107,33 @@
               clubes de todo el mundo.
             </p>
           </div>
-          <div
-            class="scroll-vertical w-1/2 flex flex-col max-h-96 overflow-auto scrollbar-hide"
-          >
-            <img src="public/fondo2.webp" alt="Unsplash 1" />
-            <img src="public/fondo3.webp" alt="Unsplash 1" />
-            <img src="public/img1.webp" alt="Unsplash 1" />
-            <img src="public/img2.webp" alt="Unsplash 1" />
-            <img src="public/img3.webp" alt="Unsplash 1" />
-            <img src="public/new2.webp" alt="Unsplash 1" />
-            <img src="public/new3.webp" alt="Unsplash 1" />
-            <img src="public/noticia1.webp" alt="Unsplash 1" />
+          <div class="w-1/2 flex flex-col gap-20">
+            <div class="flex flex-row w-full justify-between text-white animacion_ejercicio">
+              <img src="public/icon/speaker.svg" alt="Speaker" class="img-size animacion-spin" />
+              <img src="public/icon/sound.svg" alt="sound" class="img-size animacion-ping"  />
+              <img src="public/icon/pic.svg" alt="pic" class="img-size animacion-bounce" />
+            </div>
+            <div
+              class="scroll-vertical w-full flex flex-col max-h-96 overflow-auto scrollbar-hide"
+            >
+              <img src="public/fondo2.webp" alt="Unsplash 1" />
+              <img src="public/fondo3.webp" alt="Unsplash 1" />
+              <img src="public/img1.webp" alt="Unsplash 1" />
+              <img src="public/img2.webp" alt="Unsplash 1" />
+              <img src="public/img3.webp" alt="Unsplash 1" />
+              <img src="public/new2.webp" alt="Unsplash 1" />
+              <img src="public/new3.webp" alt="Unsplash 1" />
+              <img src="public/noticia1.webp" alt="Unsplash 1" />
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Parallax -->
     <div class="parallax h-80 w-full"></div>
-    <section class="w-full bg-black-1 srcset py-20">
+    <section
+      class="w-full bg-gray srcset py-20 border-solid border-y-2 border-orange"
+    >
       <div class="container flex flex-col gap-12 text-white">
         <h2 class="font-roboto-mono text-5xl text-blue">Fotos</h2>
         <ul class="list-decimal ml-6">
@@ -186,7 +196,7 @@
             href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
           >
             Listen on Spotify
-            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+            <img class="text-white animate-bounce" src="./public/icon/zelda.svg" alt="Logo" />
           </a>
           <div class="flex flex-row items-center max-h-2 gap-8">
             <a href="/">Chase & Status</a>
