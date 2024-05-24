@@ -10,11 +10,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DnB</title>
+    <!-- Importación de estilos -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- Importación del iconito de pestaña -->
     <link rel="icon" href="./public/logo/logo.svg" />
   </head>
+  <!-- BODY no tiene background -->
   <body class="flex flex-col h-screen">
+    <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
     <div class="bg-black w-full flex items-center justify-center">
+      <!-- container muy útil para hacerlo responsive -->
       <nav class="container flex flex-row items-center justify-between z-40">
         <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
           <a class="hidden sm:block" href="/">Chase & Status</a>
@@ -31,7 +36,7 @@
         <button class="md:hidden" style="float: right" onclick="toggleMenu()">
           <img src="public/icon/menu.svg" alt="Menu" />
         </button>
-        <div id="mobile-menu" class="mobile-menu" style="display: none;">
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
           <a href="category.html">Category</a>
           <a href="detail.html">Detail</a>
           <a href="presentation.html">Presentation</a>
@@ -40,6 +45,8 @@
         </div>
       </nav>
     </div>
+
+    <!-- Aquí empieza el contenido de la home main_content contiene la imagen -->
     <div
       class="main_content relative object-cover w-full h-full flex flex-col items-center justify-center"
     >
@@ -50,10 +57,12 @@
         Baddadan
       </h1>
       <div class="relative w-10/12">
+        <!-- Esto es lo que hace la animación de la música -->
         <canvas
           id="canvas"
           class="absolute -top-20 left-0 h-64 aspect-video"
         ></canvas>
+        <!-- La música -->
         <audio
           id="audio"
           src="./public/sound/music.mp3"
@@ -61,6 +70,8 @@
         ></audio>
       </div>
     </div>
+
+    <!-- Aquí empiza el footer -->
     <footer class="w-full bg-black flex justify-center">
       <div class="container flex flex-col gap-12">
         <div class="flex flex-col justify-between md:flex-row gap-12">
@@ -70,17 +81,13 @@
             <a href="presentation.html">Presentation</a>
             <a href="links.html">Links</a>
           </div>
-            <a
+          <a
             class="flex flex-row items-center gap-2"
-              href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
-            >
-              Listen on Spotify
-              <img
-                class="text-white"
-                src="./public/icon/zelda.svg"
-                alt="Logo"
-              />
-            </a>
+            href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
+          >
+            Listen on Spotify
+            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+          </a>
           <div class="flex flex-row items-center max-h-2 gap-8">
             <a href="/">Chase & Status</a>
             <div class="aspect-square w-12">
@@ -93,6 +100,7 @@
         </p>
       </div>
     </footer>
+    <!-- Importación del script -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

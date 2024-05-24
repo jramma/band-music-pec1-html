@@ -175,9 +175,53 @@ button.sandwich-menu {
   ); /* Gradiente de negro 100% opaco a transparente */
   z-index: 1;
 }
-/* #1E9DFC azul
-#BD8D46 marron
-#FCA41E naranja
-#4C80A7 azul
-#7D6A4D marron ++
-#414B52 gris */
+/* BACKGOROUND swiper */
+#albums {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/fondo2.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* CLASES SWIPER se pueden ver con el inspector y a partir 
+de ahí las puedes editar a tu gusto */
+.swiper {
+  margin-top: 2rem;
+  width: 16rem;
+  height: 22rem;
+  margin-bottom: 4rem;
+}
+.swiper-pagination {
+  .swiper-pagination-bullet{
+    background-color: white;
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #fca41e;
+    transform: scale(2);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+/* Importante medidas rem para que no se deformen las imagenes
+al hacer la pantalla más pequeña */
+.swiper-slide {
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+}
+.swiper-slide img {
+  border-radius: 2rem;
+  display: block;
+  object-fit: cover;
+  max-height: 16rem;
+}

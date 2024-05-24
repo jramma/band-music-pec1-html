@@ -12,41 +12,47 @@
     <title>DnB</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/category.css" />
-    <link rel="icon" href="./public/icon/favicon.svg" />
+    <!-- Importación del iconito de pestaña -->
+    <link rel="icon" href="./public/logo/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-  <body>
-    <nav>
-      <div id="logo" style="float: left"><a href="/">Chase & Status</a></div>
-      <div class="a-nav" style="float: right">
-        <a href="category.html" class="selected">Category</a>
-        <a href="detail.html">Detail</a>
-        <a href="presentation.html">Presentation</a>
-        <a href="links.html">Links</a>
-      </div>
-      <button class="sandwich-menu" style="float: right" onclick="toggleMenu()">
-        <img src="public/icon/menu.svg" alt="Menu" />
-      </button>
-      <div id="mobile-menu" class="mobile-menu">
-        <a href="category.html">Category</a>
-        <a href="detail.html">Detail</a>
-        <a href="presentation.html">Presentation</a>
-        <a href="links.html">Links</a>
-        <a href="index.html">Home</a>
-      </div>
-    </nav>
-    <nav class="category_nav">
-      <a href="#albums">Albums</a>
-      <a href="#de_gira">Gira</a>
-      <a href="#news">News</a>
-      <a href="#anecdotas">Anécdotas</a>
-    </nav>
-    <div class="category_content">
-      <section id="albums" class="albums">
+  <body class="flex flex-col m-0 p-0 items-center">
+    <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
+    <div class="bg-black w-full flex items-center justify-center">
+      <!-- container muy útil para hacerlo responsive -->
+      <nav class="container flex flex-row items-center justify-between z-40">
+        <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
+          <a class="hidden sm:block" href="/">Chase & Status</a>
+          <div class="aspect-square w-12">
+            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+          </div>
+        </div>
+        <div class="flex-row gap-6 hidden md:flex">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+        </div>
+        <button class="md:hidden" style="float: right" onclick="toggleMenu()">
+          <img src="public/icon/menu.svg" alt="Menu" />
+        </button>
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+          <a href="index.html">Home</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="p-0 m-0">
+      <!-- SECCION ALBUMES CON SWIPER -->
+      <section id="albums" class="w-full py-10 md:py-20 relative">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -103,115 +109,126 @@
         <div class="swiper-pagination"></div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       </section>
-      <section id="de_gira" class="info_cat">
-        <div class="title_info">
-          <h2>De gira</h2>
-          <div>
-            <a href="/detail" class="see more"
-              >Ver todos los próximos conciertos</a
-            >
-          </div>
-        </div>
-        <div class="grid_gira">
-          <div class="concert">
-            <div class="day">
-              <p class="month">mar</p>
-              <p class="number">23</p>
-            </div>
-            <div class="info_event">
-              <h2 class="city">Miami</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
-            </div>
-          </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">abr</p>
-              <p class="number">24</p>
-            </div>
-            <div class="info_event">
-              <h2 class="city">Belfast</h2>
-              <p>Chase & Status + Lude</p>
-              <p class="place">mie, 19:30 · RAC Arena</p>
-            </div>
-          </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">may</p>
-              <p class="number">14</p>
-            </div>
-            <div class="info_event">
-              <h2 class="city">Perth</h2>
-              <p>Chase & Status whit Luude</p>
-              <p class="place">lun, 23:23 · Vortex Park</p>
-            </div>
-          </div>
 
-          <div class="concert">
-            <div class="day">
-              <p class="month">ago</p>
-              <p class="number">02</p>
-            </div>
-            <div class="info_event">
-              <h2 class="city">BCN</h2>
-              <p>Chase & Status</p>
-              <p class="place">mar, 23:23 · Razz</p>
-            </div>
-          </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">sep</p>
-              <p class="number">23</p>
-            </div>
-            <div class="info_event">
-              <h2 class="city">NY</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+      <!-- SECCION DE GIRA -->
+      <section class="w-full bg-black text-white flex justify-center">
+        <div class="container flex flex-col items-center">
+          <div class="w-full flex flex-row justify-between">
+            <h2 class="text-2xl">De gira</h2>
+            <div class="flex flex-row gap-2">
+              <a href="/detail" class="text-pink-200 flex"
+                >Ver todos
+                <span class="hidden sm:flex">los próximos conciertos</span></a
+              ><img
+                class="text-white"
+                src="./public/icon/zelda.svg"
+                alt="Logo"
+              />
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">oct</p>
-              <p class="number">12</p>
+          <div
+            class="flex flex-wrap justify-center max-h-64 overflow-auto sm:max-h-none sm:justify-start items-center gap-4"
+          >
+            <div class="concert">
+              <div class="day">
+                <p class="month">mar</p>
+                <p class="number">23</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Miami</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
-            <div class="info_event">
-              <h2 class="city">London</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">abr</p>
+                <p class="number">24</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Belfast</h2>
+                <p>Chase & Status + Lude</p>
+                <p class="place">mie, 19:30 · RAC Arena</p>
+              </div>
             </div>
-          </div>
+            <div class="concert">
+              <div class="day">
+                <p class="month">may</p>
+                <p class="number">14</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Perth</h2>
+                <p>Chase & Status whit Luude</p>
+                <p class="place">lun, 23:23 · Vortex Park</p>
+              </div>
+            </div>
 
-          <div class="concert">
-            <div class="day">
-              <p class="month">oct</p>
-              <p class="number">31</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">ago</p>
+                <p class="number">02</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">BCN</h2>
+                <p>Chase & Status</p>
+                <p class="place">mar, 23:23 · Razz</p>
+              </div>
             </div>
-            <div class="info_event">
-              <h2 class="city">Napoli</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">sep</p>
+                <p class="number">23</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">NY</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
-          </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">dic</p>
-              <p class="number">1</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">oct</p>
+                <p class="number">12</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">London</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
-            <div class="info_event">
-              <h2 class="city">Roma</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+
+            <div class="concert">
+              <div class="day">
+                <p class="month">oct</p>
+                <p class="number">31</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Napoli</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
-          </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">dic</p>
-              <p class="number">2</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">dic</p>
+                <p class="number">1</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Roma</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
-            <div class="info_event">
-              <h2 class="city">Martorell</h2>
-              <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+            <div class="concert">
+              <div class="day">
+                <p class="month">dic</p>
+                <p class="number">2</p>
+              </div>
+              <div class="info_event">
+                <h2 class="city">Martorell</h2>
+                <p>Chase & Status</p>
+                <p class="place">sáb, 19:30 · Boyfront Park</p>
+              </div>
             </div>
           </div>
         </div>
