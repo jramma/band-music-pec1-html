@@ -8,18 +8,7 @@ CUMPLIR EN TODA LA WEB... FONDO, COLOR LETRAS, FUENTES,ETC */
 
 /* he usado sass para hacerlo más intuitivo el css,
 ya que te permite poner css a cosas que estan dentro de la primera */
-.roboto-mono-custom {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.urbanist-custom {
-  font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
+
 /* EFECTO nav y footer se hacen grande al cargar la pantalla */
 nav,
 footer {
@@ -216,6 +205,14 @@ al hacer la pantalla más pequeña */
   /* Imagen de fondo y gradiente */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo2.webp");
+}
+.parallax2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/fondo3.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /* Desaparecer las flechas en pantallas pequeñas
 porque suelen ser táctiles: */
