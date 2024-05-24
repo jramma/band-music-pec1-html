@@ -69,6 +69,7 @@ section {
     &:hover {
       transform: scale(1.05) rotate(15deg);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     &::before {
@@ -95,16 +96,15 @@ section {
   padding-top: 2rem;
   align-items: center;
   display: flex;
-  @media (max-width: 974px) {
-    justify-content: left;
-
-  }
-
   justify-content: center;
   overflow-x: auto;
   direction: ltr;
   padding-left: 2rem;
   padding-right: 2rem;
+  @media (max-width: 974px) {
+    justify-content: left;
+
+  }
   h2 {
     width: 100%;
     border-bottom: 1px solid #fca41e;
@@ -116,18 +116,23 @@ section {
   img {
     width: 100%;
     height: auto;
+    border-radius: 2rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
   }
   iframe {
     width: 100%;
   }
   .relacionado_item {
     height: 60vh;
-    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
     margin-right: 20px;
     width: 300px;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     padding: 1rem;
+    gap:2rem;
   }
 }
 .div_svg {

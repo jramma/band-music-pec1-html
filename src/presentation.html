@@ -121,8 +121,42 @@
         </div>
       </div>
     </section>
-    <!-- Aquí empiza el footer -->
-    <div class="parallax h-40 w-full"></div>
+    <!-- Parallax -->
+    <div class="parallax h-80 w-full"></div>
+    <section class="w-full bg-black-1 srcset py-20">
+      <div class="container flex flex-col gap-12 text-white">
+        <h2 class="font-roboto-mono text-5xl text-blue">
+          Fotos
+        </h2>
+        <ul class="list-decimal ml-6">
+            <li><a href="https://unsplash.com/es/fotos/grupo-de-personas-dentro-de-la-sala-R25Q-pAUeY8" target="_blank">Grupo de personas dentro de la sala</a></li>
+            <li><a href="https://unsplash.com/es/fotos/mezclador-de-audio-negro-y-azul-JhYnL-BiP18" target="_blank">Mezclador de audio negro y azul</a></li>
+            <li><a href="https://unsplash.com/es/fotos/grupo-de-personas-dentro-de-la-habitacion-3yt_0_PnR0A" target="_blank">Grupo de personas dentro de la habitación</a></li>
+        </ul>
+        <div
+          class="w-full flex justify-center items-center flex-wrap gap-12"
+        >
+          <picture>
+            <source media="(max-width: 600px)" srcset="./public/img/2.webp" />
+            <source media="(max-width: 1200px)" srcset="./public/img/3.webp" />
+            <img src="./public/img/1.webp" alt="Descripción de la imagen" />
+          </picture>
+
+          <img
+            src="./public/img/2.webp"
+            srcset="
+              ./public/img/1.webp  600w,
+              ./public/img/3.webp 1200w,
+              ./public/img/2.webp 1800w
+            "
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="Descripción de la imagen"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Parallax -->
+    <div class="w-full h-64 parallax"></div>
     <!-- FOOTER -->
     <footer class="w-full bg-black flex justify-center">
       <div class="container flex flex-col gap-12">

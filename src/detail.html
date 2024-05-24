@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="./styles/detail.css" />
     <link rel="icon" href="./public/icon/favicon.svg" />
   </head>
-   <!-- BODY no tiene background -->
-   <body class="flex flex-col h-screen">
+  <!-- BODY no tiene background -->
+  <body class="flex flex-col h-screen bg-black">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
     <header class="bg-black w-full flex items-center justify-center">
       <!-- container muy útil para hacerlo responsive -->
@@ -55,8 +55,8 @@
           <h2>¿Qué es drum and bass?</h2>
           <div class="box"></div>
           <div class="content_detail">
-            <div>
-              <p>¡GRACIAS BARCELONA!</p>
+            <div class="max-w-96">
+              <p class="text-2xl text-orange">¡GRACIAS BARCELONA!</p>
 
               <p>
                 ¡Qué viaje tan memorable! No puedo agradecerte lo suficiente por
@@ -77,15 +77,16 @@
               </p>
             </div>
             <iframe
-              width="560"
-              height="315"
+              class="aspect-video"
               src="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
-          <h2 class="tit_rel">Contenido relacionado</h2>
+          <h2 class="w-full py-22 text-orange text-2xl">
+            Contenido relacionado
+          </h2>
           <div class="content_relacionado">
             <div class="relacionado_item">
               <h2>Cancion de inicio</h2>
@@ -121,7 +122,7 @@
               </p>
               <img
                 class="svg"
-                src="./public/img1.webp"
+                src="./public/img2.webp"
                 alt="Descripción de la imagen 1"
               />
             </div>
@@ -138,9 +139,6 @@
       <img class="svg" src="./public/icon/yt.svg" alt="Descripción del ícono" />
       <img class="svg" src="./public/icon/tw.svg" alt="Descripción del ícono" />
     </div>
-   
-    
-
 
     <!-- Aquí empiza el footer -->
     <footer class="w-full bg-black flex justify-center">

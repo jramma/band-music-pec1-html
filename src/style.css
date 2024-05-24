@@ -280,3 +280,10 @@ porque suelen ser táctiles: */
   }
   
 }
+
+.srcset{
+  img {
+   width: 20rem;
+   object-fit: cover;
+  }
+}
