@@ -14,39 +14,17 @@ ya que te permite poner css a cosas que estan dentro de la primera */
   font-weight: 400;
   font-style: normal;
 }
-
 .urbanist-custom {
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
-body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  font-family: "Urbanist", sans-serif;
-}
-
-/* #1E9DFC azul
-#BD8D46 marron
-#FCA41E naranja
-#4C80A7 azul
-#7D6A4D marron ++
-#414B52 gris */
-
+/* EFECTO nav y footer se hacen grande al cargar la pantalla */
 nav,
 footer {
   background-color: black;
   color: white;
-  margin: 0;
-  padding: 0;
   transition: padding 0.8s ease-in-out;
 }
 body.loaded nav {
@@ -56,39 +34,31 @@ body.loaded footer {
   padding: 2rem;
   padding-bottom: 0;
 }
-nav {
-  padding-left: 5vw;
-  padding-right: 5vw;
-  margin-bottom: 0;
-}
 footer {
   padding-bottom: 0;
 }
+/* DISEÑO enlaces por defecto */
 a {
   color: white;
   text-decoration: none;
+  &:hover{
+    color: #fca41e;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
+  }
 }
-#title {
-  transition: 0.5s;
-  &:hover {
-    transition: 0.5s;
-    font-size: 12vw;
-    cursor: pointer;
-    z-index: 2;
-  }
-  &:hover:after {
-    transition: 0.8s;
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 3vw solid transparent; /* La mitad del tamaño */
-    border-bottom: 3vw solid transparent; /* La mitad del tamaño */
-    border-left: 6vw solid #ffff; /* La mitad del tamaño */
-    left: 50%; /* Coloca el triángulo en el centro horizontalmente */
-    top: 50%; /* Coloca el triángulo en el centro verticalmente */
-    transform: translate(-50%, -50%);
-  }
+#title:hover:after {
+  transition: 0.8s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 3vw solid transparent;
+  border-bottom: 3vw solid transparent;
+  border-left: 6vw solid #ffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 h1 {
   color: #fca41e;
@@ -99,51 +69,14 @@ h1 {
   display: inline-block;
   z-index: 2;
 }
-#canvas {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-}
+
 .main_content {
   background: linear-gradient(rgba(76, 128, 167, 0.3), rgba(76, 128, 167, 0.3)),
     url("public/fondo-1.webp");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-}
-.a-nav a {
-  margin-left: 2rem;
 }
 
-footer {
-  margin-top: auto;
-  text-align: center;
-  padding-bottom: 0;
-  z-index: 1;
-  a{
-    color: pink;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-}
-#copyright {
-  font-size: 0.9rem;
-}
-.a-nav {
-  display: block;
-}
-
-.sandwich-menu {
-  display: none;
-}
 
 @media (max-width: 600px) {
   .a-nav {
@@ -214,7 +147,7 @@ button.sandwich-menu {
 #main_body {
   height: 100vh;
 }
-#copyright{
+#copyright {
   margin-bottom: 2rem;
 }
 
@@ -224,7 +157,10 @@ button.sandwich-menu {
   padding-top: 0;
   width: 100%;
   height: 5rem; /* Ajusta esto a la altura que desees */
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente de negro 100% opaco a transparente */
+  background: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  ); /* Gradiente de negro 100% opaco a transparente */
   z-index: 1;
 }
 .blurry-div2 {
@@ -233,6 +169,15 @@ button.sandwich-menu {
   padding-bottom: 0;
   width: 100%;
   height: 5rem; /* Ajusta esto a la altura que desees */
-  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradiente de negro 100% opaco a transparente */
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  ); /* Gradiente de negro 100% opaco a transparente */
   z-index: 1;
 }
+/* #1E9DFC azul
+#BD8D46 marron
+#FCA41E naranja
+#4C80A7 azul
+#7D6A4D marron ++
+#414B52 gris */
