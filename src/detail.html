@@ -12,10 +12,9 @@
     <title>DnB</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/detail.css" />
-    <link rel="icon" href="./public/icon/favicon.svg" />
+    <link rel="icon" href="./public/logo/logo.svg" />
   </head>
-  <!-- BODY no tiene background -->
-  <body class="flex flex-col h-screen bg-black">
+  <body class="flex flex-col bg-black text-white">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
     <header class="bg-black w-full flex items-center justify-center">
       <!-- container muy útil para hacerlo responsive -->
@@ -45,101 +44,141 @@
       </nav>
     </header>
 
-    <div class="detail_content">
+    <div class="parallax2 flex items-center justify-center h-96">
       <h1>D & B</h1>
     </div>
-    <div id="detail_text">
-      <section>
-        <div class="section_content">
-          <div class="box"></div>
-          <h2>¿Qué es drum and bass?</h2>
-          <div class="box"></div>
-          <div class="content_detail">
-            <div class="max-w-96">
-              <p class="text-2xl text-orange">¡GRACIAS BARCELONA!</p>
 
-              <p>
-                ¡Qué viaje tan memorable! No puedo agradecerte lo suficiente por
-                una asistencia tan increíble. ¡Definitivamente valió la pena el
-                viaje de 24 horas de ida y vuelta!
-              </p>
-
-              <p>
-                Vi muchas de las mismas caras de 2022 y aquí estamos de nuevo en
-                2023.
-              </p>
-
-              <p>
-                Como mencioné durante el viaje,
-                <strong>REGRESARÉ a BARCELONA el 6 de DICIEMBRE</strong> para
-                <strong>MI SHOW DE CUMPLEAÑOS</strong>, ¡así que supongo que te
-                veré allí!
-              </p>
-            </div>
-            <iframe
-              class="aspect-video"
-              src="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+    <!-- QUE ES Chase & status? -->
+    <section id="detail_text">
+      <div class="section_content">
+        <div class="box"></div>
+        <h2>¿Quién es Chase & status?</h2>
+        <div class="box"></div>
+        <div
+          class="container flex flex-col md:flex-row items-center justify-center py-12 gap-12"
+        >
+          <div class="max-w-96 font-light flex flex-col gap-2">
+            <p class="text-2xl text-orange font-roboto-mono">Chase & Status</p>
+            <p>
+              Chase & Status es un grupo británico de música electrónica
+              producida por Saul Milton (Chase) y Will Kennard (Status).
+              Actualmente, MC Rage & Andy Gangadeen también componen la banda.
+              El dúo de Londres, y se formó en 2003 después de conocerse en la
+              universidad en Manchester. El grupo desde entonces ha lanzado tres
+              discos, además de colaborar con los principales artistas de la
+              talla de Plan B, Cee Lo Green, Rihanna, Example y Tinie Tempah.
+            </p>
+            <a class="text-blue-500 font-semibold" href="https://es.wikipedia.org/wiki/Chase_%26_Status">
+              Entrada wikipedia.
+            </a>
+            
           </div>
-          <h2 class="w-full py-22 text-orange text-2xl">
-            Contenido relacionado
-          </h2>
-          <div class="content_relacionado">
-            <div class="relacionado_item">
-              <h2>Cancion de inicio</h2>
-              <p>
-                Music video by Chase & Status, Bou performing Baddadan. An EMI
-                recording; © 2023 Chase & Status, under exclusive licence to
-                Universal Music Operations Limited
-              </p>
-              <iframe
-                src="https://www.youtube.com/embed/rkjNL4dX-U4"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="relacionado_item">
-              <h2>Chase & Straus</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                aliquid sit ducimus alias animi quae facilis tempore veritatis
-                incidunt, repellat nostrum. Sunt, quam. Minus est magnam animi
-                nesciunt quod in.
-              </p>
-              <img src="./public/img1.webp" alt="Descripción de la imagen 1" />
-            </div>
-            <div class="relacionado_item">
-              <h2>Underground</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                aliquid sit ducimus alias animi quae facilis tempore veritatis
-                incidunt, repellat nostrum. Sunt, quam. Minus est magnam animi
-                nesciunt quod in.
-              </p>
-              <img
-                class="svg"
-                src="./public/img2.webp"
-                alt="Descripción de la imagen 1"
-              />
-            </div>
-          </div>
+          <picture class="transition-all duration-500 ease-in-out transform hover:scale-105 self-center">
+            <source media="(min-width: 1200px)" srcset="./public/principal1.webp" />
+            <source media="(min-width: 900px)" srcset="./public/principal2.webp" />
+            <img class="aspect-video max-h-72 object-cover self-center" src="./public/principal.webp" alt="Chase and straus artists" />
+          </picture>
         </div>
-      </section>
-    </div>
-    <div class="div_svg">
-      <img
-        class="svg"
-        src="./public/icon/git.svg"
-        alt="Descripción del ícono"
-      />
-      <img class="svg" src="./public/icon/yt.svg" alt="Descripción del ícono" />
-      <img class="svg" src="./public/icon/tw.svg" alt="Descripción del ícono" />
-    </div>
+      </div>
+    </section>
+    <!-- PARALLAX -->
+    <div class="w-full h-60 parallax2"></div>
 
+    <!-- QUE ES D&B -->
+    <section id="detail_text">
+      <div class="section_content">
+        <div class="box"></div>
+        <h2>¿Qué es drum and bass?</h2>
+        <div class="box"></div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center py-12 gap-12"
+        >
+          <div class="max-w-96 font-light flex flex-col gap-2">
+            <p class="text-2xl text-orange font-roboto-mono">
+              ¡GRACIAS BARCELONA!
+            </p>
+            <p>
+              ¡Qué viaje tan memorable! No puedo agradecerte lo suficiente por
+              una asistencia tan increíble. ¡Definitivamente valió la pena el
+              viaje de 24 horas de ida y vuelta!
+            </p>
+            <p>
+              Vi muchas de las mismas caras de 2022 y aquí estamos de nuevo en
+              2023.
+            </p>
+            <p>
+              Como mencioné durante el viaje,
+              <strong>REGRESARÉ a BARCELONA el 6 de DICIEMBRE</strong> para
+              <strong>MI SHOW DE CUMPLEAÑOS</strong>, ¡así que supongo que te
+              veré allí!
+            </p>
+          </div>
+          <iframe
+            class="aspect-video"
+            src="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- PARALLAX -->
+    <div class="w-full h-60 parallax2"></div>
+
+    <!-- Contenido relacionado -->
+    <section class="container py-12">
+      <h2 class="w-full py-22 text-orange text-2xl">Contenido relacionado</h2>
+      <div class="content_relacionado">
+        <div class="relacionado_item">
+          <h2>Cancion de inicio</h2>
+          <p>
+            Music video by Chase & Status, Bou performing Baddadan. An EMI
+            recording; © 2023 Chase & Status, under exclusive licence to
+            Universal Music Operations Limited
+          </p>
+          <iframe
+            src="https://www.youtube.com/embed/rkjNL4dX-U4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="relacionado_item">
+          <h2>Chase & Straus</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aliquid
+            sit ducimus alias animi quae facilis tempore veritatis incidunt,
+            repellat nostrum. Sunt, quam. Minus est magnam animi nesciunt quod
+            in.
+          </p>
+          <img src="./public/img1.webp" alt="Descripción de la imagen 1" />
+        </div>
+        <div class="relacionado_item">
+          <h2>Underground</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aliquid
+            sit ducimus alias animi quae facilis tempore veritatis incidunt,
+            repellat nostrum. Sunt, quam. Minus est magnam animi nesciunt quod
+            in.
+          </p>
+          <img
+            class="svg"
+            src="./public/img2.webp"
+            alt="Descripción de la imagen 1"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- PARALLAX -->
+    <div class="w-full h-60 parallax2"></div>
+    <div class="div_svg py-12">
+      <img src="./public/icon/git.svg" alt="Descripción del ícono" />
+      <img src="./public/icon/yt.svg" alt="Descripción del ícono" />
+      <img src="./public/icon/tw.svg" alt="Descripción del ícono" />
+    </div>
+    <!-- PARALLAX -->
+    <div class="w-full h-60 parallax2"></div>
     <!-- Aquí empiza el footer -->
     <footer class="w-full bg-black flex justify-center">
       <div class="container flex flex-col gap-12">
@@ -169,6 +208,6 @@
         </p>
       </div>
     </footer>
-    <script src="./scripts/detail.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

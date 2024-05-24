@@ -15,8 +15,8 @@
     <!-- Importación del iconito de pestaña -->
     <link rel="icon" href="./public/logo/logo.svg" />
   </head>
-  <!-- BODY no tiene background -->
-  <body class="flex flex-col h-screen">
+ 
+  <body class="flex flex-col h-screen body_main">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
     <header class="bg-black w-full flex items-center justify-center">
       <!-- container muy útil para hacerlo responsive -->
@@ -56,21 +56,18 @@
       >
         Baddadan
       </h1>
-      <div class="relative w-10/12">
-        <!-- Esto es lo que hace la animación de la música -->
-        <canvas
-          id="canvas"
-          class="absolute -top-20 left-0 h-64 aspect-video"
-        ></canvas>
-        <!-- La música -->
-        <audio
-          id="audio"
-          src="./public/sound/music.mp3"
-          class="absolute"
-        ></audio>
-      </div>
+      
     </div>
-
+      <!-- Esto es lo que hace la animación de la música -->
+      <canvas
+        id="canvas"
+      ></canvas>
+      <!-- La música -->
+      <audio
+        id="audio"
+        src="./public/sound/music.mp3"
+        class="absolute"
+      ></audio>
     <!-- Aquí empiza el footer -->
     <footer class="w-full bg-black flex justify-center">
       <div class="container flex flex-col gap-12">

@@ -39,7 +39,6 @@ footer {
 }
 /* DISEÑO enlaces por defecto */
 a {
-  color: white;
   text-decoration: none;
   &:hover {
     color: #fca41e;
@@ -47,6 +46,7 @@ a {
     text-decoration: underline;
   }
 }
+
 #title:hover:after {
   transition: 0.8s;
   content: "";
@@ -69,12 +69,23 @@ h1 {
   display: inline-block;
   z-index: 2;
 }
-
-.main_content {
+.body_main {
   background: linear-gradient(rgba(76, 128, 167, 0.3), rgba(76, 128, 167, 0.3)),
     url("public/fondo-1.webp");
   background-size: cover;
   background-position: center;
+}
+.main_content {
+  background: linear-gradient(rgba(76, 128, 167, 0.3), rgba(76, 128, 167, 0.3)),
+    url("public/principal.webp");
+  background-size: cover;
+  background-position: top;
+  transition: clip-path 1.2s ease-in-out;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  &:hover {
+    transition: clip-path 1.2s ease-in-out;
+    clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+  }
 }
 
 @media (max-width: 600px) {
@@ -244,17 +255,17 @@ porque suelen ser táctiles: */
     font-size: 1.5rem;
     font-family: "Urbanist", sans-serif;
   }
-  img{
+  img {
     transition: transform 0.3s ease-in-out;
-  &:hover{
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
-  }}
+    &:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
 }
 
-
 /* span e imagenes de PRESENTATION.html  */
-.presentation{
+.presentation {
   span {
     display: inline-block;
     transition: 1s;
@@ -269,7 +280,7 @@ porque suelen ser táctiles: */
       font-size: 1.2rem;
     }
   }
-  
+
   .scroll-vertical {
     img {
       width: 90%;
@@ -278,12 +289,28 @@ porque suelen ser táctiles: */
       margin-top: 2rem;
     }
   }
-  
 }
 
-.srcset{
+.srcset {
   img {
-   width: 20rem;
-   object-fit: cover;
+    width: 20rem;
+    object-fit: cover;
   }
+}
+/* canvas */
+#canvas {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+  height: 21rem;
+}
+.box {
+  border: 1px solid #ffff;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: center;
+  height: 2vw;
 }

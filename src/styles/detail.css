@@ -1,36 +1,22 @@
-.detail_content {
-  position: relative;
-  z-index: 1;
+.parallax2 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo3.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-bottom: 10vw;
-  margin: 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 /* Esto es porque la rotación de video nos 
 crea un overflow x que no queremos */
-body{
-  overflow-x: hidden ;
+body {
+  overflow-x: hidden;
 }
 section {
   width: 100%;
 }
 #detail_text {
   color: #ffff;
-  .box {
-    border: 1px solid #ffff;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    text-align: center;
-    height: 2vw;
-  }
+  
   h2 {
     text-align: center;
   }
@@ -40,53 +26,33 @@ section {
   align-items: center;
 }
 
-.content_detail {
-  margin-top: 3vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8vh;
-
+iframe {
+  width: 42%;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   @media (max-width: 974px) {
-    flex-direction: column;
+    width: 80%;
   }
-  div {
-    width: 42%;
-    margin-right: 1rem;
-    @media (max-width: 974px) {
-      width: 80%;
-    }
-  }
-
-  iframe {
-    width: 42%;
-    position: relative;
+  &:hover {
+    transform: scale(1.05) rotate(15deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    @media (max-width: 974px) {
-      width: 80%;
-    }
-    &:hover {
-      transform: scale(1.05) rotate(15deg);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: orange;
-      transition: width 0.3s;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: width 0.3s;
+  }
 
-    &:hover::before {
-      width: 100%;
-      transform: rotate(15deg);
-    }
+  &:hover::before {
+    width: 100%;
+    transform: rotate(15deg);
   }
 }
 
@@ -103,7 +69,6 @@ section {
   padding-right: 2rem;
   @media (max-width: 974px) {
     justify-content: left;
-
   }
   h2 {
     width: 100%;
@@ -132,25 +97,24 @@ section {
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     padding: 1rem;
-    gap:2rem;
+    gap: 2rem;
   }
 }
 .div_svg {
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
-  gap:3rem;
+  gap: 3rem;
   img {
     height: 10vh;
     width: 10vh;
     transition: 1s;
-
   }
   img:hover {
     height: 11vh;
     width: 11vh;
     cursor: pointer;
     transition: 1s;
+    aspect-ratio: 1/1;
   }
 }
 .tit_rel {
