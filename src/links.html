@@ -8,29 +8,34 @@
       rel="stylesheet"
     />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DnB</title>
-    <link rel="stylesheet" href="./styles/links.css" />
-    <link rel="icon" href="./public/icon/favicon.svg" />
+    <!-- Importación de estilos -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Importación del iconito de pestaña -->
+    <link rel="icon" href="./public/logo/logo.svg" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <div id="logo" style="float: left"><a href="/">Chase & Status</a></div>
-        <div class="a-nav" style="float: right">
+  <body class="flex flex-col text-white h-screen bg-black">
+    <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
+    <header class="bg-black w-full flex items-center justify-center">
+      <!-- container muy útil para hacerlo responsive -->
+      <nav class="container flex flex-row items-center justify-between z-40">
+        <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
+          <a class="hidden sm:block" href="/">Chase & Status</a>
+          <div class="aspect-square w-12">
+            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+          </div>
+        </div>
+        <div class="flex-row gap-6 hidden md:flex">
           <a href="category.html">Category</a>
           <a href="detail.html">Detail</a>
           <a href="presentation.html">Presentation</a>
-          <a href="links.html" class="selected">Links</a>
+          <a href="links.html">Links</a>
         </div>
-        <button
-          class="sandwich-menu"
-          style="float: right"
-          onclick="toggleMenu()"
-        >
+        <button class="md:hidden" style="float: right" onclick="toggleMenu()">
           <img src="public/icon/menu.svg" alt="Menu" />
         </button>
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
           <a href="category.html">Category</a>
           <a href="detail.html">Detail</a>
           <a href="presentation.html">Presentation</a>
@@ -39,106 +44,220 @@
         </div>
       </nav>
     </header>
-    <main>
-      <h1 id="titulo">Links:</h1>
-      <div class="content">
-        <div class="text">
-          <ol>
-            <li>
-              I. Portada
-              <ul>
-                <li>Background: <a href="https://unsplash.com/es/s/fotos/underground?license=free">Link al background</a></li>
-                <li>Music: <a href="https://www.youtube.com/watch?v=rkjNL4dX-U4">Link a la música</a></li>
-                <li>Font style: <a href="https://fonts.google.com/specimen/Urbanist">Urbanist</a></li>
-                <li>Font style: <a href="https://fonts.google.com/specimen/Roboto+Mono?query=roboto+mono">Roboto mono</a></li>
-              </ul>
-            </li>
-            <li>
-              II. Categoría
-              <ul>
-                <li>Albums: <a href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=vVJ6PmlQRtOARg5ySGyO3g">Link a los albums</a></li>
-                <li>Dates of concerts: son falsas.</li>
-                <li>News: son falsas.</li>
-                <li>Anecdotas: son falsas.</li>
-              </ul>
-            </li>
-            <li>
-              III. Detalle
-              <ul>
-                <li>Video 1: <a href="https://www.youtube.com/embed/rkjNL4dX-U4">Link al video 1</a></li>
-                <li>Video 2: <a href="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112">Link al video 2</a></li>
-                <!-- Añade más subelementos aquí si es necesario -->
-              </ul>
-            </li>
-            <li>
-              IV. Autores de las fotos
-              <ul>
-                <li>Redd F: <a href="https://unsplash.com/es/fotos/vista-aerea-de-la-ciudad-bajo-el-cielo-nublado-durante-el-dia-Dl_Ya8eNRpk">Link a la imagen </a></li>
-                <li>Platon Matakaev: <a href="https://unsplash.com/es/fotos/una-foto-en-blanco-y-negro-de-una-estacion-de-metro-a0sUgm3_CQU">Link a la imagen</a></li>
-                <li>Gerson Repreza: <a href="https://unsplash.com/es/fotos/puente-de-hormigon-gris-cerca-de-edificios-de-la-ciudad-cKC56DqQI1w">Link a la imagen </a></li>
-                <li>Sympathy: <a href="https://sympathyforthelawyer.com/blog/festivales-de-musica-inseguridad-juridica/">Link </a></li>
-                <li>Austin Neill: <a href="https://unsplash.com/es/fotos/hombre-con-camisa-gris-de-manga-corta-cantando-hgO1wFPXl3I">Link </a></li>
-                <li>Dario: <a href="https://unsplash.com/es/fotos/dj-frente-a-la-multitud-dD_k8TNRCWc">Link </a></li>
-                <li>Anima Visual: <a href="https://unsplash.com/es/fotos/mujer-con-camisa-blanca-de-manga-larga-con-gafas-de-sol-negras-WZz3e0GuZaM">Dj sonriendo
-              </ul>
-            </li>
-            <li>
-              V. Colors and tools:
-              <ul>
-                <li>
-                  Libraries:
-                  <ul>
-                    <li>parcel</li>
-                    <li>autoprefixer</li>
-                    <li>sass</li>
-                  </ul>
-                </li>
-                <li>Stack</li>
+
+    <!-- contendio links -->
+    <main
+      class="container flex flex-row justify-center items-center h-full gap-2 parallax w-full"
+    >
+      <div class="w-1/2 flex flex-col items-end">
+        <h1 class="text-5xl font-urbanist text-orange w-1/2 text-right">
+          Links:
+        </h1>
+        <img src="./public/icon/right.svg" alt="Icono de links" class="w-12 rotate-90 animate-pulse" />
+      </div>
+      <div
+        id="links_naranjas"
+        class="h-96 overflow-auto self-end scrollbar-hide w-1/2"
+      >
+        <ol class="pb-72 pt-7 flex flex-col gap-2 font-light w-full">
+          <li class="flex flex-col gap-2">
+            <h2>Portada</h2>
+            <ul>
+              <li>
+                <p>Background:</p>
+                <a
+                  href="https://unsplash.com/es/s/fotos/underground?license=free"
+                  >Link al background</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Music:</p>
+                <a href="https://www.youtube.com/watch?v=rkjNL4dX-U4"
+                  >Link a la música</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Font style:</p>
+                <a href="https://fonts.google.com/specimen/Urbanist"
+                  >Urbanist</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Font style:</p>
+                <a
+                  href="https://fonts.google.com/specimen/Roboto+Mono?query=roboto+mono"
+                  >Roboto Mono</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Categoría</h2>
+            <ul>
+              <li class="flex gap-2">
+                <p>Albums:</p>
+                <a
+                  href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=vVJ6PmlQRtOARg5ySGyO3g"
+                  >Link a los albums</a
+                >
+              </li>
+              <li>Dates of concerts: son falsas.</li>
+              <li>News: son falsas.</li>
+              <li>Anecdotas: son falsas.</li>
+            </ul>
+          </li>
+          <li>
+            <h2>Detalle</h2>
+            <ul>
+              <li class="flex gap-2">
+                <p>Video 1:</p>
+                <a href="https://www.youtube.com/embed/rkjNL4dX-U4"
+                  >Link al video 1</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Video 2:</p>
+                <a href="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112"
+                  >Link al video 2</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Autores de las fotos</h2>
+            <ul>
+              <li class="flex gap-2">
+                <p>Redd F:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/vista-aerea-de-la-ciudad-bajo-el-cielo-nublado-durante-el-dia-Dl_Ya8eNRpk"
+                  >Link a la imagen</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Platon Matakaev:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/una-foto-en-blanco-y-negro-de-una-estacion-de-metro-a0sUgm3_CQU"
+                  >Link a la imagen</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Gerson Repreza:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/puente-de-hormigon-gris-cerca-de-edificios-de-la-ciudad-cKC56DqQI1w"
+                  >Link a la imagen</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Sympathy:</p>
+                <a
+                  href="https://sympathyforthelawyer.com/blog/festivales-de-musica-inseguridad-juridica/"
+                  >Link</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Austin Neill:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/hombre-con-camisa-gris-de-manga-corta-cantando-hgO1wFPXl3I"
+                  >Link</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Dario:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/dj-frente-a-la-multitud-dD_k8TNRCWc"
+                  >Link</a
+                >
+              </li>
+              <li class="flex gap-2">
+                <p>Anima Visual:</p>
+                <a
+                  href="https://unsplash.com/es/fotos/mujer-con-camisa-blanca-de-manga-larga-con-gafas-de-sol-negras-WZz3e0GuZaM"
+                  >Dj sonriendo</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Colors and tools</h2>
+            <ul>
+              <li class="flex gap-2">
+                <p>Libraries:</p>
+                <ul>
+                  <li>parcel</li>
+                  <li>autoprefixer</li>
+                  <li>sass</li>
+                </ul>
+              </li>
+              <li class="flex gap-2">
+                <p>Stack:</p>
                 <ul>
                   <li>JS</li>
                   <li>HTML</li>
                   <li>CSS</li>
                 </ul>
-              </ul>
-            </li>
-            <li>
-              <h2>
-                Encuentrame en Github:
-                <a href="https://github.com/jramma" id="nick">jramma</a>
-              </h2>
-            </li>
-            <li>
-              <div class="div_svg">
-                <a href="https://github.com/jramma"
-                  ><img
-                    class="svg"
-                    src="./public/icon/git.svg"
-                    alt="Descripción del ícono"
-                /></a>
-                <a href="https://www.linkedin.com/in/jramma/">
-                  <img
-                    class="svg"
-                    src="./public/icon/yt.svg"
-                    alt="Descripción del ícono"
-                /></a>
-                <a href="https://www.instagram.com/jramma1/">
-                  <img
-                    class="svg"
-                    src="./public/icon/tw.svg"
-                    alt="Descripción del ícono"
-                /></a>
-              </div>
-            </li>
-          </ol>
-        </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Encuentrame en <span class="text-purple-400">Github</span>:</h2>
+            <a href="https://github.com/jramma" id="nick">jramma</a>
+          </li>
+          <div class="flex flex-row py-12 gap-2">
+            <a href="https://github.com/jramma">
+              <img
+                class="h-12 aspect-square"
+                src="./public/icon/git.svg"
+                alt="Descripción del ícono"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/jramma/">
+              <img
+                class="h-12 aspect-square"
+                src="./public/icon/yt.svg"
+                alt="Descripción del ícono"
+              />
+            </a>
+            <a href="https://www.instagram.com/jramma1/">
+              <img
+                class="h-12 aspect-square"
+                src="./public/icon/tw.svg"
+                alt="Descripción del ícono"
+              />
+            </a>
+          </div>
+        </ol>
       </div>
     </main>
-    <footer>
-      <p>Thank you for see my page 🫶🏼</p>
-      <p id="copyright">
-        Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
-      </p>
+
+    <!-- Aquí empiza el footer -->
+    <footer class="w-full bg-black flex justify-center">
+      <div class="container flex flex-col gap-12">
+        <div class="flex flex-col justify-between md:flex-row gap-12">
+          <div class="flex-row gap-6 flex">
+            <a href="category.html">Category</a>
+            <a href="detail.html">Detail</a>
+            <a href="presentation.html">Presentation</a>
+            <a href="links.html">Links</a>
+          </div>
+          <a
+            class="flex flex-row items-center gap-2"
+            href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
+          >
+            Listen on Spotify
+            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+          </a>
+          <div class="flex flex-row items-center max-h-2 gap-8">
+            <a href="/">Chase & Status</a>
+            <div class="aspect-square w-12">
+              <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+            </div>
+          </div>
+        </div>
+        <p class="pb-12 self-center">
+          Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
+        </p>
+      </div>
     </footer>
-    <script src="./scripts/links.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

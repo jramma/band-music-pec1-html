@@ -11,60 +11,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DnB</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./styles/presentation.css" />
-    <link rel="icon" href="./public/icon/favicon.svg" />
+    <link rel="icon" href="./public/logo/logo.svg" />
   </head>
-  <body>
-    <nav>
-      <div id="logo" style="float: left"><a href="/">Chase & Status</a></div>
-      <div class="a-nav" style="float: right">
-        <a href="category.html">Category</a>
-        <a href="detail.html">Details</a>
-        <a href="presentation.html" class="selected">Presentation</a>
-        <a href="links.html">Links</a>
-      </div>
-      <button class="sandwich-menu" style="float: right" onclick="toggleMenu()">
-        <img src="public/icon/menu.svg" alt="Menu" />
-      </button>
-      <div id="mobile-menu" class="mobile-menu">
-        <a href="category.html">Category</a>
-        <a href="detail.html">Details</a>
-        <a href="presentation.html">Presentation</a>
-        <a href="links.html">Links</a>
-        <a href="index.html">Home</a>
-      </div>
-    </nav>
-    <div class="presentation-content">
-      <h1>Presentation</h1>
-    </div>
-    <div class="content_pres">
-      <div class="text">
-        <div>
-          <h2>Resumen</h2>
-          <p>
-            Esta página es un proyecto de la clase HTML y CSS del Máster de
-            desarrollo web y aplicaciones de la UOC.
-          </p>
-          <p>
-            Todo el contenido que ves de imagenes es de uso gratuito y lo puedes
-            encontrar en
-            <span><a href="https://unsplash.com/es">UNSPLASH</a></span>
-          </p>
-          <p>
-            Cualquier comentario es bienvenido: <span>jrammas@uoc.edu</span>
-          </p>
-          <p>
-            También puedes ver el código en
-            <span
-              ><a href="https://github.com/jramma/band-music-pec1-html">
-                repositorio github</a
-              ></span
-            >, sientete libre de copiarlo y hacer con él lo que quieras.
-          </p>
+  <!-- BODY no tiene background -->
+  <body class="flex flex-col presentation">
+    <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
+    <header class="w-full flex items-center justify-center bg-black">
+      <!-- container muy útil para hacerlo responsive -->
+      <nav class="container flex flex-row items-center justify-between z-40">
+        <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
+          <a class="hidden sm:block" href="/">Chase & Status</a>
+          <div class="aspect-square w-12">
+            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+          </div>
         </div>
-        <div>
-          <div>
-            <h2>¿Por qué Chase and Status?</h2>
+        <div class="flex-row gap-6 hidden md:flex">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+        </div>
+        <button class="md:hidden" style="float: right" onclick="toggleMenu()">
+          <img src="public/icon/menu.svg" alt="Menu" />
+        </button>
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+          <a href="index.html">Home</a>
+        </div>
+      </nav>
+    </header>
+    <!-- PARALLAX -->
+    <div
+      class="parallax w-full h-96 flex justify-center items-end relative border-solid border-b-2 border-orange"
+    >
+      <h1 class="-bottom-14">Presentation</h1>
+    </div>
+    <!-- Contenido -->
+    <section class="w-full bg-gray">
+      <div class="container py-10 sm:py-20 flex">
+        <div
+          class="w-full flex flex-col-reverse items-center md:items-start self md:flex-row gap-20"
+        >
+          <div class="flex flex-col gap-6 text-white w-1/2">
+            <h2 class="text-4xl text-orange font-mono">Resumen</h2>
+            <p>
+              Esta página es un proyecto de la clase HTML y CSS del Máster de
+              desarrollo web y aplicaciones de la UOC.
+            </p>
+            <p>
+              Todo el contenido que ves de imagenes es de uso gratuito y lo
+              puedes encontrar en
+              <span><a href="https://unsplash.com/es">UNSPLASH</a></span>
+            </p>
+            <p>
+              Cualquier comentario es bienvenido: <span>jrammas@uoc.edu</span>
+            </p>
+            <p>
+              También puedes ver el código en
+              <span
+                ><a href="https://github.com/jramma/band-music-pec1-html">
+                  repositorio github</a
+                ></span
+              >, sientete libre de copiarlo y hacer con él lo que quieras.
+            </p>
+            <h2 class="text-2xl text-orange font-mono">
+              ¿Por qué Chase and Status?
+            </h2>
             <p>
               ¿Y por qué no? Chase and Status han revolucionado muchos aspectos
               de la música, incluyendo la forma en que creamos y consumimos.
@@ -81,38 +96,61 @@
               que estás escuchando no solo a los artistas, sino también a la
               tecnología que ha hecho posible su música.
             </p>
+            <h2 class="text-2xl text-orange font-mono">Baddadan</h2>
+            <p>
+              La canción "Baddadan" es una colaboración entre Chase & Status y
+              Bou. Cuenta con las voces de IRAH, Flowdan, Trigga y Takura. El
+              tema es una melodía de drum and bass de alta energía con un
+              estribillo pegadizo y una línea de bajo potente. Ha sido un éxito
+              en la escena del drum and bass y se ha tocado en festivales y
+              clubes de todo el mundo.
+            </p>
+          </div>
+          <div
+            class="scroll-vertical w-1/2 flex flex-col max-h-96 overflow-auto scrollbar-hide"
+          >
+            <img src="public/fondo2.webp" alt="Unsplash 1" />
+            <img src="public/fondo3.webp" alt="Unsplash 1" />
+            <img src="public/img1.webp" alt="Unsplash 1" />
+            <img src="public/img2.webp" alt="Unsplash 1" />
+            <img src="public/img3.webp" alt="Unsplash 1" />
+            <img src="public/new2.webp" alt="Unsplash 1" />
+            <img src="public/new3.webp" alt="Unsplash 1" />
+            <img src="public/noticia1.webp" alt="Unsplash 1" />
           </div>
         </div>
-        <div>
-          <h2>Baddadan</h2>
-          <p>
-            La canción "Baddadan" es una colaboración entre Chase & Status y
-            Bou. Cuenta con las voces de IRAH, Flowdan, Trigga y Takura. El tema
-            es una melodía de drum and bass de alta energía con un estribillo
-            pegadizo y una línea de bajo potente. Ha sido un éxito en la escena
-            del drum and bass y se ha tocado en festivales y clubes de todo el
-            mundo.
-          </p>
+      </div>
+    </section>
+    <!-- Aquí empiza el footer -->
+    <div class="parallax h-40 w-full"></div>
+    <!-- FOOTER -->
+    <footer class="w-full bg-black flex justify-center">
+      <div class="container flex flex-col gap-12">
+        <div class="flex flex-col justify-between md:flex-row gap-12">
+          <div class="flex-row gap-6 flex">
+            <a href="category.html">Category</a>
+            <a href="detail.html">Detail</a>
+            <a href="presentation.html">Presentation</a>
+            <a href="links.html">Links</a>
+          </div>
+          <a
+            class="flex flex-row items-center gap-2"
+            href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
+          >
+            Listen on Spotify
+            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+          </a>
+          <div class="flex flex-row items-center max-h-2 gap-8">
+            <a href="/">Chase & Status</a>
+            <div class="aspect-square w-12">
+              <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+            </div>
+          </div>
         </div>
+        <p class="pb-12 self-center">
+          Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
+        </p>
       </div>
-      <div class="scroll-vertical">
-        <div class="blurry-div"></div>
-        <img src="public/fondo2.webp" alt="Unsplash 1" />
-        <img src="public/fondo3.webp" alt="Unsplash 1" />
-        <img src="public/img1.webp" alt="Unsplash 1" />
-        <img src="public/img2.webp" alt="Unsplash 1" />
-        <img src="public/img3.webp" alt="Unsplash 1" />
-        <img src="public/new2.webp" alt="Unsplash 1" />
-        <img src="public/new3.webp" alt="Unsplash 1" />
-        <img src="public/noticia1.webp" alt="Unsplash 1" />
-        <div class="blurry-div2"></div>
-      </div>
-    </div>
-    <footer>
-      <p>Chase & Status, Bou - Baddadan ft. IRAH, Flowdan, Trigga, Takura</p>
-      <p id="copyright">
-        Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
-      </p>
     </footer>
     <script src="./scripts/presentation.js"></script>
   </body>

@@ -14,26 +14,37 @@
     <link rel="stylesheet" href="./styles/detail.css" />
     <link rel="icon" href="./public/icon/favicon.svg" />
   </head>
-  <body>
-    <nav>
-      <div id="logo" style="float: left"><a href="/">Chase & Status</a></div>
-      <div class="a-nav" style="float: right">
-        <a href="category.html">Category</a>
-        <a href="detail.html" class="selected">Detail</a>
-        <a href="presentation.html">Presentation</a>
-        <a href="links.html">Links</a>
-      </div>
-      <button class="sandwich-menu" style="float: right" onclick="toggleMenu()">
-        <img src="public/icon/menu.svg" alt="Menu" />
-      </button>
-      <div id="mobile-menu" class="mobile-menu">
-        <a href="category.html">Category</a>
-        <a href="detail.html">Detail</a>
-        <a href="presentation.html">Presentation</a>
-        <a href="links.html">Links</a>
-        <a href="index.html">Home</a>
-      </div>
-    </nav>
+   <!-- BODY no tiene background -->
+   <body class="flex flex-col h-screen">
+    <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
+    <header class="bg-black w-full flex items-center justify-center">
+      <!-- container muy útil para hacerlo responsive -->
+      <nav class="container flex flex-row items-center justify-between z-40">
+        <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
+          <a class="hidden sm:block" href="/">Chase & Status</a>
+          <div class="aspect-square w-12">
+            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+          </div>
+        </div>
+        <div class="flex-row gap-6 hidden md:flex">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+        </div>
+        <button class="md:hidden" style="float: right" onclick="toggleMenu()">
+          <img src="public/icon/menu.svg" alt="Menu" />
+        </button>
+        <div id="mobile-menu" class="mobile-menu" style="display: none">
+          <a href="category.html">Category</a>
+          <a href="detail.html">Detail</a>
+          <a href="presentation.html">Presentation</a>
+          <a href="links.html">Links</a>
+          <a href="index.html">Home</a>
+        </div>
+      </nav>
+    </header>
+
     <div class="detail_content">
       <h1>D & B</h1>
     </div>
@@ -127,11 +138,38 @@
       <img class="svg" src="./public/icon/yt.svg" alt="Descripción del ícono" />
       <img class="svg" src="./public/icon/tw.svg" alt="Descripción del ícono" />
     </div>
-    <footer>
-      <p>Chase & Status, Bou - Baddadan ft. IRAH, Flowdan, Trigga, Takura</p>
-      <p id="copyright">
-        Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
-      </p>
+   
+    
+
+
+    <!-- Aquí empiza el footer -->
+    <footer class="w-full bg-black flex justify-center">
+      <div class="container flex flex-col gap-12">
+        <div class="flex flex-col justify-between md:flex-row gap-12">
+          <div class="flex-row gap-6 flex">
+            <a href="category.html">Category</a>
+            <a href="detail.html">Detail</a>
+            <a href="presentation.html">Presentation</a>
+            <a href="links.html">Links</a>
+          </div>
+          <a
+            class="flex flex-row items-center gap-2"
+            href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
+          >
+            Listen on Spotify
+            <img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
+          </a>
+          <div class="flex flex-row items-center max-h-2 gap-8">
+            <a href="/">Chase & Status</a>
+            <div class="aspect-square w-12">
+              <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+            </div>
+          </div>
+        </div>
+        <p class="pb-12 self-center">
+          Made with ❤️ by <a href="https://www.jramma.com">jramma</a>
+        </p>
+      </div>
     </footer>
     <script src="./scripts/detail.js"></script>
   </body>

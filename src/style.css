@@ -150,32 +150,12 @@ button.sandwich-menu {
   margin-bottom: 2rem;
 }
 
-.blurry-div {
-  position: sticky;
-  top: 0;
-  padding-top: 0;
-  width: 100%;
-  height: 5rem; /* Ajusta esto a la altura que desees */
-  background: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  ); /* Gradiente de negro 100% opaco a transparente */
-  z-index: 1;
-}
-.blurry-div2 {
-  position: sticky;
-  bottom: 0;
-  padding-bottom: 0;
-  width: 100%;
-  height: 5rem; /* Ajusta esto a la altura que desees */
-  background: linear-gradient(
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1)
-  ); /* Gradiente de negro 100% opaco a transparente */
-  z-index: 1;
-}
-
-/* CLASES SWIPER se pueden ver con el inspector y a partir 
+/* ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
+### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
+### ### #### ### ### ### ### #### ### ### ### ### #### ### ###
+ ### ### #### ### ### ### ### #### ### ### ### ### #### ### ###  */
+/*                        CLASES SWIPER        
+se pueden ver con el inspector y a partir 
 de ahí las puedes editar a tu gusto */
 .swiper {
   margin-top: 2rem;
@@ -225,4 +205,78 @@ al hacer la pantalla más pequeña */
   /* Imagen de fondo y gradiente */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo2.webp");
+}
+/* Desaparecer las flechas en pantallas pequeñas
+porque suelen ser táctiles: */
+#navigation {
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  top: 10rem;
+  left: -8rem;
+  justify-content: space-between;
+  width: 200%; /* Asegúrate de que el contenedor se extienda a lo largo de todo el ancho */
+  @media (max-width: 890px) {
+    display: none;
+  }
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .button-prev {
+    transform: rotate(180deg);
+  }
+}
+/*                      FIN SWIPER                              */
+/* ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
+### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
+### ### #### ### ### ### ### #### ### ### ### ### #### ### ###
+ ### ### #### ### ### ### ### #### ### ### ### ### #### ### ###  */
+/* Estilos links */
+#links_naranjas {
+  a {
+    color: aqua;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-family: "Urbanist", sans-serif;
+  }
+  img{
+    transition: transform 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }}
+}
+
+
+/* span e imagenes de PRESENTATION.html  */
+.presentation{
+  span {
+    display: inline-block;
+    transition: 1s;
+    color: deeppink;
+    a {
+      transition: 1s;
+      color: deeppink;
+    }
+    &:hover {
+      cursor: pointer;
+      transition: 1s;
+      font-size: 1.2rem;
+    }
+  }
+  
+  .scroll-vertical {
+    img {
+      width: 90%;
+      height: auto;
+      border-radius: 2rem;
+      margin-top: 2rem;
+    }
+  }
+  
 }

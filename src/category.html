@@ -22,7 +22,7 @@
   </head>
   <body class="flex flex-col m-0 p-0 items-center">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
-    <div class="bg-black w-full flex items-center justify-center">
+    <header class="bg-black w-full flex items-center justify-center">
       <!-- container muy útil para hacerlo responsive -->
       <nav class="container flex flex-row items-center justify-between z-40">
         <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
@@ -48,7 +48,7 @@
           <a href="index.html">Home</a>
         </div>
       </nav>
-    </div>
+    </header>
 
     <!-- SECCION ALBUMES CON SWIPER -->
     <section class="w-full py-10 md:py-20 relative parallax">
@@ -110,12 +110,14 @@
     </section>
 
     <!-- SECCION DE GIRA -->
-    <section class="w-full bg-black text-white flex justify-center">
+    <section
+      class="w-full bg-black text-white flex flex-col items-center py-10 md:py-20"
+    >
       <div class="container flex flex-col items-center">
-        <div class="w-full flex flex-row justify-between">
+        <div class="w-full flex flex-row justify-between items-center py-6">
           <h2 class="text-2xl">De gira</h2>
           <div class="flex flex-row gap-2">
-            <a href="/detail" class="text-pink-200 flex"
+            <a href="/detail" class="text-pink-200 flex flex-row"
               >Ver todos
               <span class="hidden sm:flex">los próximos conciertos</span></a
             ><img class="text-white" src="./public/icon/zelda.svg" alt="Logo" />
@@ -230,9 +232,7 @@
     </section>
     <!-- PARALLAX -->
     <div class="parallax p-32 w-full"></div>
-    
-    
-    
+
     <!-- SECCION NOTICIAS -->
     <section
       class="bg-black-1 p-0 w-full flex flex-col items-center text-white py-10 sm:py-20"
@@ -246,7 +246,7 @@
             <img class="img_art" src="./public/noticia1.webp" alt="ellos" />
             <h3 class="titulo_art">Un montón de amigos crean Badaddan</h3>
           </div>
-          <div>
+          <div class="p-4">
             <p>Mar 17 de feb 23</p>
             <p>
               La nueva escuela y la vieja del drum and bass hacen migas para
@@ -261,7 +261,7 @@
             <img class="img_art" src="./public/new2.webp" alt="DJ" />
             <h3 class="titulo_art">DJ Famoso lanza nuevo álbum</h3>
           </div>
-          <div>
+          <div class="p-4">
             <p>Mié 23 de mar 23</p>
             <p>
               El reconocido DJ Famoso ha lanzado su esperado nuevo álbum. Este
@@ -278,7 +278,7 @@
               Anuncian fechas para el Festival de Música Electrónica
             </h3>
           </div>
-          <div>
+          <div class="p-4">
             <p>Jue 24 de mar 23</p>
             <p>
               Los organizadores del Festival de Música Electrónica han anunciado
@@ -292,16 +292,15 @@
     </section>
     <!-- PARALLAX -->
     <div class="parallax p-32 w-full"></div>
-    
-    
-    
+
     <!-- SECCION Anecdotas -->
-    <section class="bg-black text-white w-full flex flex-col items-center py-10 sm:py-20">
+    <section
+      class="bg-black text-white w-full flex flex-col items-center py-10 sm:py-20"
+    >
       <div class="container">
         <h2 class="text-4xl text-orange font-urbanist self-start">Anécdotas</h2>
       </div>
       <div class="container flex flex-col items-center gap-12">
-        <div class="blurry-div"></div>
         <div class="lg:w-1/2 flex flex-col">
           <h3 class="text-orange font-semibold font-2xl">
             El concierto inesperado
@@ -372,7 +371,6 @@
             />
           </div>
         </div>
-        <div class="blurry-div2"></div>
       </div>
     </section>
     <!-- PARALLAX -->

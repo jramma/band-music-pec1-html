@@ -1,40 +1,16 @@
-/* Desaparecer las flechas en pantallas pequeñas
-porque suelen ser táctiles: */
-#navigation {
-  z-index: 50;
-  position: absolute;
-  display: flex;
-  top: 10rem;
-  left: -8rem;
-  justify-content: space-between;
-  width: 200%; /* Asegúrate de que el contenedor se extienda a lo largo de todo el ancho */
-  @media (max-width: 890px) {
-    display: none;
-  }
-  img {
-    height: 4rem;
-    width: 4rem;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  .button-prev {
-    transform: rotate(180deg);
-  }
-}
+/* CSS apartado "de gira" */
 .name {
   font-size: 500;
   font-size: 1.5rem;
   margin: 0;
 }
-
 .concert {
   width: 19rem;
   height: 7rem;
   background-color: transparent;
   display: flex;
+  gap:1rem;
 }
-
 .day {
   background-color: #414b52;
   width: 5rem;
@@ -87,8 +63,7 @@ h2.city {
     color: #fca41e;
   }
 }
-
-
+/* CSS articulos */
 .articulo {
   border-bottom: #fff 1px solid;
   border-left: #fff 1px solid;
@@ -134,4 +109,3 @@ h2.city {
     }
   }
 }
-
