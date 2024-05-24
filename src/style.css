@@ -124,32 +124,6 @@ button.sandwich-menu {
   display: block;
   margin-bottom: 1rem;
 }
-#hueco {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/src/public/fondo2.webp") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 30vw;
-  margin: 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.selected {
-  color: #fca41e;
-}
-#main_body {
-  height: 100vh;
-}
-#copyright {
-  margin-bottom: 2rem;
-}
-
 /* ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
 ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
 ### ### #### ### ### ### ### #### ### ### ### ### #### ### ###
@@ -175,7 +149,7 @@ de ahí las puedes editar a tu gusto */
     transition: transform 0.3s ease-in-out;
   }
 }
-/* Importante medidas rem para que no se deformen las imagenes
+/* Importante  aspect-ratio: 1/1; object-fit: cover; para que no se deformen las imagenes
 al hacer la pantalla más pequeña */
 .swiper-slide {
   border-radius: 2rem;
@@ -187,7 +161,8 @@ al hacer la pantalla más pequeña */
   justify-content: center;
   align-items: center;
   width: 8rem;
-  height: 8rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 .swiper-slide img {
   border-radius: 2rem;
