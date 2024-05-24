@@ -41,7 +41,7 @@ footer {
 a {
   color: white;
   text-decoration: none;
-  &:hover{
+  &:hover {
     color: #fca41e;
     transition: color 0.3s ease-in-out;
     text-decoration: underline;
@@ -76,7 +76,6 @@ h1 {
   background-size: cover;
   background-position: center;
 }
-
 
 @media (max-width: 600px) {
   .a-nav {
@@ -175,15 +174,6 @@ button.sandwich-menu {
   ); /* Gradiente de negro 100% opaco a transparente */
   z-index: 1;
 }
-/* BACKGOROUND swiper */
-#albums {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/src/public/fondo2.webp") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 /* CLASES SWIPER se pueden ver con el inspector y a partir 
 de ahí las puedes editar a tu gusto */
@@ -194,12 +184,12 @@ de ahí las puedes editar a tu gusto */
   margin-bottom: 4rem;
 }
 .swiper-pagination {
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     background-color: white;
     opacity: 0.8;
     transition: transform 0.3s ease-in-out;
   }
-  .swiper-pagination-bullet-active{
+  .swiper-pagination-bullet-active {
     background-color: #fca41e;
     transform: scale(2);
     transition: transform 0.3s ease-in-out;
@@ -224,4 +214,15 @@ al hacer la pantalla más pequeña */
   display: block;
   object-fit: cover;
   max-height: 16rem;
+}
+/* PARALLAX */
+.parallax {
+  /* Crear el efecto parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Imagen de fondo y gradiente */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/public/fondo2.webp");
 }

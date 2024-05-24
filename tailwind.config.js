@@ -14,10 +14,14 @@ module.exports = {
         },
         orange: "#FCA41E",
         gray: "#414B52",
+        black: {
+          DEFAULT: "#000000",
+          1: "#1d1d1d",
+        },
       },
       fontFamily: {
-        'roboto-mono': ['"Roboto Mono"', 'monospace'],
-        'urbanist': ['"Urbanist"', 'sans-serif'],
+        "roboto-mono": ['"Roboto Mono"', "monospace"],
+        urbanist: ['"Urbanist"', "sans-serif"],
       },
     },
   },
