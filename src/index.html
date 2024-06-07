@@ -15,16 +15,23 @@
     <!-- Importación del iconito de pestaña -->
     <link rel="icon" href="./public/logo/logo.svg" />
   </head>
- 
+
   <body class="flex flex-col h-screen body_main">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
     <header class="bg-black w-full flex items-center justify-center">
       <!-- container muy útil para hacerlo responsive -->
       <nav class="container flex flex-row items-center justify-between z-40">
         <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
-          <a class="hidden sm:block font-urbanist text-orange text-3xl" href="/">Chase & Status</a>
+          <a class="hidden sm:block font-urbanist text-orange text-3xl" href="/"
+            >Chase & Status</a
+          >
           <div class="aspect-square w-12">
-            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+            <img
+              loading="lazy"
+              class="svg"
+              src="./public/logo/logo.svg"
+              alt="Logo"
+            />
           </div>
         </div>
         <div class="flex-row gap-6 hidden md:flex">
@@ -34,7 +41,7 @@
           <a href="links.html">Links</a>
         </div>
         <button class="md:hidden" style="float: right" onclick="toggleMenu()">
-          <img src="public/icon/menu.svg" alt="Menu" />
+          <img loading="lazy" src="public/icon/menu.svg" alt="Menu" />
         </button>
         <div id="mobile-menu" class="mobile-menu" style="display: none">
           <a href="category.html">Category</a>
@@ -56,18 +63,11 @@
       >
         Baddadan
       </h1>
-      
     </div>
-      <!-- Esto es lo que hace la animación de la música -->
-      <canvas
-        id="canvas"
-      ></canvas>
-      <!-- La música -->
-      <audio
-        id="audio"
-        src="./public/sound/music.mp3"
-        class="absolute"
-      ></audio>
+    <!-- Esto es lo que hace la animación de la música -->
+    <canvas id="canvas"></canvas>
+    <!-- La música -->
+    <audio id="audio" src="./public/sound/music.mp3" class="absolute"></audio>
     <!-- Aquí empiza el footer -->
     <footer class="w-full bg-black flex justify-center">
       <div class="container flex flex-col gap-12">
@@ -83,12 +83,22 @@
             href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
           >
             Listen on Spotify
-            <img class="text-white animate-bounce" src="./public/icon/zelda.svg" alt="Logo" />
+            <img
+              loading="lazy"
+              class="text-white animate-bounce"
+              src="./public/icon/zelda.svg"
+              alt="Logo"
+            />
           </a>
           <div class="flex flex-row items-center max-h-2 gap-8">
             <a href="/">Chase & Status</a>
             <div class="aspect-square w-12">
-              <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+              <img
+                loading="lazy"
+                class="svg"
+                src="./public/logo/logo.svg"
+                alt="Logo"
+              />
             </div>
           </div>
         </div>
@@ -98,6 +108,6 @@
       </div>
     </footer>
     <!-- Importación del script -->
-    <script type="module" src="main.js"></script>
+    <script async type="module" src="main.js"></script>
   </body>
 </html>

@@ -20,23 +20,30 @@
       <!-- container muy útil para hacerlo responsive -->
       <nav class="container flex flex-row items-center justify-between z-40">
         <div id="logo" class="flex flex-row items-center max-h-2 gap-8">
-          <a class="hidden sm:block font-urbanist text-orange text-3xl" href="/">Chase & Status</a>
+          <a class="hidden sm:block font-urbanist text-orange text-3xl" href="/"
+            >Chase & Status</a
+          >
           <div class="aspect-square w-12">
-            <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+            <img
+              loading="lazy"
+              class="svg"
+              src="./public/logo/logo.svg"
+              alt="Logo"
+            />
           </div>
         </div>
         <div class="flex-row gap-6 hidden md:flex">
           <a href="category.html">Category</a>
-          <a href="detail.html"  class="text-orange">Detail</a>
+          <a href="detail.html" class="text-orange">Detail</a>
           <a href="presentation.html">Presentation</a>
           <a href="links.html">Links</a>
         </div>
         <button class="md:hidden" style="float: right" onclick="toggleMenu()">
-          <img src="public/icon/menu.svg" alt="Menu" />
+          <img loading="lazy" src="public/icon/menu.svg" alt="Menu" />
         </button>
         <div id="mobile-menu" class="mobile-menu" style="display: none">
           <a href="category.html">Category</a>
-          <a href="detail.html"  class="text-orange">Detail</a>
+          <a href="detail.html" class="text-orange">Detail</a>
           <a href="presentation.html">Presentation</a>
           <a href="links.html">Links</a>
           <a href="index.html">Home</a>
@@ -52,9 +59,10 @@
     <section class="py-20">
       <div class="flex flex-col w-full items-center">
         <div class="container flex flex-col items-center">
-        <div class="box w-full"></div>
-        <h2 class="text-4xl font-roboto-mono">¿Quién es Chase & status?</h2>
-        <div class="box w-full"></div></div>
+          <div class="box w-full"></div>
+          <h2 class="text-4xl font-roboto-mono">¿Quién es Chase & status?</h2>
+          <div class="box w-full"></div>
+        </div>
         <div
           class="container flex flex-col md:flex-row items-center justify-center py-12 gap-12"
         >
@@ -69,15 +77,30 @@
               discos, además de colaborar con los principales artistas de la
               talla de Plan B, Cee Lo Green, Rihanna, Example y Tinie Tempah.
             </p>
-            <a class="text-blue-500 font-semibold" href="https://es.wikipedia.org/wiki/Chase_%26_Status">
+            <a
+              class="text-blue-500 font-semibold"
+              href="https://es.wikipedia.org/wiki/Chase_%26_Status"
+            >
               Entrada wikipedia.
             </a>
-            
           </div>
-          <picture class="transition-all duration-500 ease-in-out transform hover:scale-105 self-center">
-            <source media="(min-width: 1200px)" srcset="./public/principal1.webp" />
-            <source media="(min-width: 900px)" srcset="./public/principal2.webp" />
-            <img class="aspect-video max-h-72 object-cover self-center" src="./public/principal.webp" alt="Chase and straus artists" />
+          <picture
+            class="transition-all duration-500 ease-in-out transform hover:scale-105 self-center"
+          >
+            <source
+              media="(min-width: 1200px)"
+              srcset="./public/principal1.webp"
+            />
+            <source
+              media="(min-width: 900px)"
+              srcset="./public/principal2.webp"
+            />
+            <img
+              loading="lazy"
+              class="aspect-video max-h-72 object-cover self-center"
+              src="./public/principal.webp"
+              alt="Chase and straus artists"
+            />
           </picture>
         </div>
       </div>
@@ -86,7 +109,7 @@
     <div class="w-full h-60 parallax2"></div>
 
     <!-- QUE ES D&B -->
-    <section >
+    <section>
       <div class="container flex flex-col items-center py-10">
         <div class="box w-full"></div>
         <h2>¿Qué es drum and bass?</h2>
@@ -115,11 +138,12 @@
             </p>
           </div>
           <iframe
-            class="aspect-video"
+            class="aspect-video yt_player_iframe"
             src="https://www.youtube.com/embed/eoMy-5LvJMY?start=1112"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
       </div>
@@ -138,12 +162,14 @@
             recording; © 2023 Chase & Status, under exclusive licence to
             Universal Music Operations Limited
           </p>
-          <iframe
+        <iframe
             src="https://www.youtube.com/embed/rkjNL4dX-U4"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+            loading="lazy"
+            class="yt_player_iframe"
+        ></iframe>
         </div>
         <div class="relacionado_item">
           <h2>Chase & Straus</h2>
@@ -153,7 +179,11 @@
             repellat nostrum. Sunt, quam. Minus est magnam animi nesciunt quod
             in.
           </p>
-          <img src="./public/img1.webp" alt="Descripción de la imagen 1" />
+          <img
+            loading="lazy"
+            src="./public/img1.webp"
+            alt="Descripción de la imagen 1"
+          />
         </div>
         <div class="relacionado_item">
           <h2>Underground</h2>
@@ -164,6 +194,7 @@
             in.
           </p>
           <img
+            loading="lazy"
             class="svg"
             src="./public/img2.webp"
             alt="Descripción de la imagen 1"
@@ -174,9 +205,21 @@
     <!-- PARALLAX -->
     <div class="w-full h-60 parallax2"></div>
     <div class="div_svg py-12">
-      <img src="./public/icon/git.svg" alt="Descripción del ícono" />
-      <img src="./public/icon/yt.svg" alt="Descripción del ícono" />
-      <img src="./public/icon/tw.svg" alt="Descripción del ícono" />
+      <img
+        loading="lazy"
+        src="./public/icon/git.svg"
+        alt="Descripción del ícono"
+      />
+      <img
+        loading="lazy"
+        src="./public/icon/yt.svg"
+        alt="Descripción del ícono"
+      />
+      <img
+        loading="lazy"
+        src="./public/icon/tw.svg"
+        alt="Descripción del ícono"
+      />
     </div>
     <!-- PARALLAX -->
     <div class="w-full h-60 parallax2"></div>
@@ -195,12 +238,22 @@
             href="https://open.spotify.com/intl-es/artist/3jNkaOXasoc7RsxdchvEVq?si=b81c6227ca6a4b9e"
           >
             Listen on Spotify
-            <img class="text-white animate-bounce" src="./public/icon/zelda.svg" alt="Logo" />
+            <img
+              loading="lazy"
+              class="text-white animate-bounce"
+              src="./public/icon/zelda.svg"
+              alt="Logo"
+            />
           </a>
           <div class="flex flex-row items-center max-h-2 gap-8">
             <a href="/">Chase & Status</a>
             <div class="aspect-square w-12">
-              <img class="svg" src="./public/logo/logo.svg" alt="Logo" />
+              <img
+                loading="lazy"
+                class="svg"
+                src="./public/logo/logo.svg"
+                alt="Logo"
+              />
             </div>
           </div>
         </div>
@@ -209,6 +262,6 @@
         </p>
       </div>
     </footer>
-    <script src="./main.js"></script>
+    <script async type="module" src="./main.js"></script>
   </body>
 </html>
