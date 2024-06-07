@@ -59,12 +59,14 @@ h1 {
   z-index: 2;
 }
 .body_main {
+  --background-image-lazy: "public/fondo-1.webp";
   background: linear-gradient(rgba(76, 128, 167, 0.3), rgba(76, 128, 167, 0.3)),
     url("public/fondo-1.webp");
   background-size: cover;
   background-position: center;
 }
 .main_content {
+  --background-image-lazy: "public/principal.webp";
   background: linear-gradient(rgba(76, 128, 167, 0.3), rgba(76, 128, 167, 0.3)),
     url("public/principal.webp");
   background-size: cover;
@@ -178,10 +180,13 @@ al hacer la pantalla más pequeña */
   background-repeat: no-repeat;
   background-size: cover;
   /* Imagen de fondo y gradiente */
+  --background-image-lazy: "public/fondo2.webp";
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo2.webp");
 }
 .parallax2 {
+  --background-image-lazy: "public/fondo3.webp";
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo3.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -313,10 +318,14 @@ porque suelen ser táctiles: */
 @keyframes bounce {
   0%,
   100% {
-    transform: translateY(0); /* Inicia y termina la traslación en 0 (posición original) */
+    transform: translateY(
+      0
+    ); /* Inicia y termina la traslación en 0 (posición original) */
   }
   50% {
-    transform: translateY(-20px); /* A la mitad de la animación, traslada el elemento 20px hacia arriba */
+    transform: translateY(
+      -20px
+    ); /* A la mitad de la animación, traslada el elemento 20px hacia arriba */
   }
 }
 

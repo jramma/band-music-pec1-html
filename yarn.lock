@@ -971,6 +971,11 @@
   resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@sitelintcode/css-lazy-loading-background@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.npmjs.org/@sitelintcode/css-lazy-loading-background/-/css-lazy-loading-background-0.0.11.tgz"
+  integrity sha512-kkb5/HkbxRZR4AOox5YRtxPGQvXF3QVHZoclUzmTu1g5PpNrzbcsIt82aoPF702qHRaIo6yI5CuSsdc4KriL7w==
+
 "@swc/core-darwin-arm64@1.5.25":
   version "1.5.25"
   resolved "https://registry.npmjs.org/@swc/core-darwin-arm64/-/core-darwin-arm64-1.5.25.tgz"

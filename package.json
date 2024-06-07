@@ -33,6 +33,7 @@
     "vm-browserify": "^1.1.2"
   },
   "dependencies": {
+    "@sitelintcode/css-lazy-loading-background": "^0.0.11",
     "autoprefixer": "^10.4.19",
     "jsdom": "^24.1.0",
     "punycode": "^2.3.1",
