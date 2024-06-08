@@ -1,10 +1,10 @@
-// Aquí importas los módulos necesarios según la página
-import "./scripts/navigation.js"; // Código relacionado con la navegación
-import "./scripts/canvas.js"; // Código relacionado con la animación de canvas
-import "./scripts/scrolling.js"; // Código relacionado con el scrolling
-import "./scripts/swipper.js"; // Código relacionado con Swiper
-import "./scripts/links.js"; // Código relacionado con el scrolling
-
+window.addEventListener("DOMContentLoaded", (event) => {
+  import("./scripts/navigation.js"); // Código relacionado con la navegación
+  import("./scripts/canvas.js"); // Código relacionado con la animación de canvas
+  import("./scripts/scrolling.js"); // Código relacionado con el scrolling
+  import("./scripts/swipper.js"); // Código relacionado con Swiper
+  import("./scripts/links.js"); // Código relacionado con el scrolling
+});
 if (typeof window !== "undefined") {
   window.addEventListener("load", function () {
     document.body.classList.add("loaded");
