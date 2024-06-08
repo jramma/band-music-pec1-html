@@ -352,3 +352,42 @@ porque suelen ser táctiles: */
     animation: bounce 2s ease infinite; /* Aplica la animación 'bounce' con una duración de 2 segundos, una función de tiempo 'ease' (aceleración suave) y una repetición infinita */
   }
 }
+/* Category */
+.cabecera_art {
+  margin-top: 2rem;
+  position: relative;
+  text-align: left;
+  justify-content: left;
+  padding: 1rem;
+
+  .titulo_art {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 2rem;
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  img {
+    height: 9rem;
+    width: 110%;
+    object-fit: cover;
+    filter: blur(1px);
+    border-radius: 24px;
+  }
+  @media (max-width: 500px) {
+    img {
+      display: none;
+    }
+    .titulo_art {
+      font-size: 1.2rem;
+      color: #fca41e;
+      text-decoration: underline;
+      padding-bottom: 2rem;
+    }
+  }
+}

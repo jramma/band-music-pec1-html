@@ -11,14 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DnB</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./styles/category.css" />
     <!-- Importación del iconito de pestaña -->
     <link rel="icon" href="./public/logo/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body class="flex flex-col m-0 p-0 items-center">
     <!-- flex con ancho de pantalla para que el nav se vea negro aunque el nav se limita a container -->
@@ -63,7 +62,7 @@
       >
         <a href="#info">Chase & Status</a>
         <a href="#albums">Albúms</a>
-        <a href="#concert">Conciertos</a>
+        <a href="#w-72 h-28 bg-transparent flex gap-4">Conciertos</a>
         <a href="#news">Noticias</a>
         <a href="#anecdota">Anecdotas</a>
       </div>
@@ -131,7 +130,7 @@
               src="./public/albums/img-1.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">2 RUFF, Vol. 1</p>
+            <p class="text-2xl font-semibold pt-2">2 RUFF, Vol. 1</p>
             <p>2023</p>
           </div>
           <div class="swiper-slide">
@@ -140,7 +139,7 @@
               src="./public/albums/img-2.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">What Came Before</p>
+            <p class="text-2xl font-semibold pt-2">What Came Before</p>
             <p>2022</p>
           </div>
           <div class="swiper-slide">
@@ -149,7 +148,7 @@
               src="./public/albums/img-3.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">fabric presents</p>
+            <p class="text-2xl font-semibold pt-2">Fabric presents</p>
             <p>2020</p>
           </div>
           <div class="swiper-slide">
@@ -158,7 +157,7 @@
               src="./public/albums/img-4.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">RTRN II JUNGLE</p>
+            <p class="text-2xl font-semibold pt-2">RTRN II JUNGLE</p>
             <p>2019</p>
           </div>
           <div class="swiper-slide">
@@ -167,7 +166,7 @@
               src="./public/albums/img-5.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">Tribe</p>
+            <p class="text-2xl font-semibold pt-2">Tribe</p>
             <p>2017</p>
           </div>
           <div class="swiper-slide">
@@ -176,7 +175,7 @@
               src="./public/albums/img-6.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">Brand New Machine</p>
+            <p class="text-2xl font-semibold pt-2">Brand New Machine</p>
             <p>2013</p>
           </div>
           <div class="swiper-slide">
@@ -185,7 +184,7 @@
               src="./public/albums/img-7.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">Live At Brixton</p>
+            <p class="text-2xl font-semibold pt-2">Live At Brixton</p>
             <p>2012</p>
           </div>
           <div class="swiper-slide">
@@ -194,7 +193,7 @@
               src="./public/albums/img-8.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">No More Idols</p>
+            <p class="text-2xl font-semibold pt-2">No More Idols</p>
             <p>2011</p>
           </div>
           <div class="swiper-slide">
@@ -203,7 +202,7 @@
               src="./public/albums/img-9.webp"
               class="w-64 aspect-square"
             />
-            <p class="name">More Than Alot</p>
+            <p class="text-2xl font-semibold pt-2">More Than Alot</p>
             <p>2008</p>
           </div>
         </div>
@@ -243,105 +242,105 @@
         <div
           class="flex flex-wrap justify-center max-h-64 overflow-auto sm:max-h-none sm:justify-start items-center gap-4"
         >
-          <div class="concert">
-            <div class="day">
-              <p class="month">mar</p>
-              <p class="number">23</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">mar</p>
+              <p class="font-bold font-500">23</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Miami</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Miami</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">abr</p>
-              <p class="number">24</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">abr</p>
+              <p class="font-bold font-500">24</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Belfast</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Belfast</h2>
               <p>Chase & Status + Lude</p>
-              <p class="place">mie, 19:30 · RAC Arena</p>
+              <p class="text-gray font-bold font-700">mie, 19:30 · RAC Arena</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">may</p>
-              <p class="number">14</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">may</p>
+              <p class="font-bold font-500">14</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Perth</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Perth</h2>
               <p>Chase & Status whit Luude</p>
-              <p class="place">lun, 23:23 · Vortex Park</p>
+              <p class="text-gray font-bold font-700">lun, 23:23 · Vortex Park</p>
             </div>
           </div>
 
-          <div class="concert">
-            <div class="day">
-              <p class="month">ago</p>
-              <p class="number">02</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">ago</p>
+              <p class="font-bold font-500">02</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">BCN</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">BCN</h2>
               <p>Chase & Status</p>
-              <p class="place">mar, 23:23 · Razz</p>
+              <p class="text-gray font-bold font-700">mar, 23:23 · Razz</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">sep</p>
-              <p class="number">23</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">sep</p>
+              <p class="font-bold font-500">23</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">NY</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">NY</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">oct</p>
-              <p class="number">12</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">oct</p>
+              <p class="font-bold font-500">12</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">London</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">London</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
 
-          <div class="concert">
-            <div class="day">
-              <p class="month">oct</p>
-              <p class="number">31</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">oct</p>
+              <p class="font-bold font-500">31</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Napoli</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Napoli</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">dic</p>
-              <p class="number">1</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">dic</p>
+              <p class="font-bold font-500">1</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Roma</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Roma</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
-          <div class="concert">
-            <div class="day">
-              <p class="month">dic</p>
-              <p class="number">2</p>
+          <div class="w-72 h-28 bg-transparent flex gap-4">
+            <div class="bg-gray w-20 h-20 rounded-lg flex flex-col items-center justify-center">
+              <p class="m-0">dic</p>
+              <p class="font-bold font-500">2</p>
             </div>
-            <div class="info_event">
-              <h2 class="city">Martorell</h2>
+            <div class="pt-0 flex flex-col">
+              <h2 class="font-500">Martorell</h2>
               <p>Chase & Status</p>
-              <p class="place">sáb, 19:30 · Boyfront Park</p>
+              <p class="text-gray font-bold font-700">sáb, 19:30 · Boyfront Park</p>
             </div>
           </div>
         </div>
@@ -356,10 +355,10 @@
       class="bg-black-1 p-0 w-full flex flex-col items-center text-white py-10 sm:py-20"
     >
       <div class="container">
-        <h2 class="text-4xl text-orange font-urbanist self-start">Noticias</h2>
+        <h2 class="text-4xl text-orange font-urbanist self-start pb-6">Noticias</h2>
       </div>
       <div class="container flex flex-wrap gap-6">
-        <div class="articulo">
+        <div class="border-b border-l border-white items-center w-96 ">
           <div class="cabecera_art">
             <img
               loading="lazy"
@@ -379,7 +378,7 @@
             </p>
           </div>
         </div>
-        <div class="articulo">
+        <div class="border-b border-l border-white items-center w-96">
           <div class="cabecera_art">
             <img
               loading="lazy"
@@ -399,7 +398,7 @@
             </p>
           </div>
         </div>
-        <div class="articulo">
+        <div class="border-b border-l border-white items-center w-96">
           <div class="cabecera_art">
             <img
               loading="lazy"
