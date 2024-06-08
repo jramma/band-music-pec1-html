@@ -338,11 +338,6 @@ porque suelen ser táctiles: */
 
 /* Definición de las clases para las animaciones */
 .animacion_ejercicio {
-  /* Definición de la clase 'img-size' */
-  .img-size {
-    width: 20%; /* Establece el ancho de la imagen al 20% del contenedor */
-    height: auto; /* Establece la altura de la imagen automáticamente para mantener las proporciones */
-  }
 
   /* Definición de la clase 'animacion-spin' */
   .animacion-spin {
