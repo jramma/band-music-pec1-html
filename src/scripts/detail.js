@@ -1,10 +1,3 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-  import("./scripts/navigation.js");
-  import("./scripts/canvas.js");
-  import("./scripts/scrolling.js");
-  import("./scripts/swipper.js");
-  import("./scripts/links.js");
-});
 const mobile = document.getElementById("mobile-menu");
 if (mobile) {
   if (typeof window !== "undefined") {

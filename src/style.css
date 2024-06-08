@@ -186,7 +186,7 @@ al hacer la pantalla más pequeña */
     url("/src/public/fondo2.webp");
 }
 .parallax2 {
-  --background-image-lazy: "/src/public/fondo3.webp";
+  --background-image-lazy: "public/fondo3.webp";
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/src/public/fondo3.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
