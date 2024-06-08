@@ -1,28 +1,32 @@
-const mobile = document.getElementById("mobile-menu");
-if (mobile) {
-  if (typeof window !== "undefined") {
-    window.addEventListener("load", function () {
-      document.body.classList.add("loaded");
-    });
+if (typeof window !== "undefined") {
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+
+  const mobile = document.getElementById("mobile-menu");
+  if (mobile) {
     window.toggleMenu = function () {
-      var menu = document.getElementById("mobile-menu");
-      if (menu.style.display === "none") {
-        menu.style.display = "block";
-      } else {
-        menu.style.display = "none";
-      }
+      mobile.classList.toggle("visible");
     };
   }
-}
-const nav = document.getElementById("nav");
-if (nav) {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      const targetPosition =
-        target.getBoundingClientRect().top + window.pageYOffset - 100;
-      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+
+  const nav = document.getElementById("nav");
+  if (nav) {
+    nav.addEventListener("click", function (e) {
+      const target = e.target.closest('a[href^="#"]');
+      if (target) {
+        e.preventDefault();
+        const targetElement = document.querySelector(
+          target.getAttribute("href")
+        );
+        if (targetElement) {
+          const targetPosition =
+            targetElement.getBoundingClientRect().top +
+            window.pageYOffset -
+            100;
+          window.scrollTo({ top: targetPosition, behavior: "smooth" });
+        }
+      }
     });
-  });
+  }
 }

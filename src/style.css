@@ -126,6 +126,13 @@ button.sandwich-menu {
   display: block;
   margin-bottom: 1rem;
 }
+#mobile-menu {
+  display: none;
+}
+#mobile-menu.visible {
+  display: block;
+}
+
 /* ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
 ### ### #### ### ### ### ### #### ### ### ### ### #### ### ### 
 ### ### #### ### ### ### ### #### ### ### ### ### #### ### ###
