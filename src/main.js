@@ -5,19 +5,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
   import("./scripts/swipper.js"); // Código relacionado con Swiper
   import("./scripts/links.js"); // Código relacionado con el scrolling
 });
-if (typeof window !== "undefined") {
-  window.addEventListener("load", function () {
-    document.body.classList.add("loaded");
-  });
 
-  window.toggleMenu = function () {
-    var menu = document.getElementById("mobile-menu");
-    if (menu.style.display === "none") {
-      menu.style.display = "block";
-    } else {
-      menu.style.display = "none";
-    }
-  };
+const mobile = document.getElementById("mobile-menu");
+if (mobile) {
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+
+    window.toggleMenu = function () {
+      var menu = document.getElementById("mobile-menu");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    };
+  }
 }
 
 const nav = document.getElementById("nav");

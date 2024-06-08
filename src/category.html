@@ -16,6 +16,7 @@
     <!-- Importación del iconito de pestaña -->
     <link rel="icon" href="./public/logo/logo.svg" />
     <link
+      async
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
@@ -31,6 +32,7 @@
           >
           <div class="aspect-square w-12">
             <img
+              class="w-12 aspect-square"
               loading="lazy"
               class="svg"
               src="./public/logo/logo.svg"
@@ -45,7 +47,12 @@
           <a href="links.html">Links</a>
         </div>
         <button class="md:hidden" style="float: right" onclick="toggleMenu()">
-          <img loading="lazy" src="public/icon/menu.svg" alt="Menu" />
+          <img
+            loading="lazy"
+            src="public/icon/menu.svg"
+            alt="Menu"
+            class="w-8 aspect-square"
+          />
         </button>
         <div id="mobile-menu" class="mobile-menu" style="display: none">
           <a href="category.html" class="text-orange">Category</a>
@@ -242,7 +249,7 @@
               <span class="hidden sm:flex">los próximos conciertos</span></a
             ><img
               loading="lazy"
-              class="text-white"
+              class="text-white animate-bounce w-6 aspect-square"
               src="./public/icon/zelda.svg"
               alt="Logo"
             />
@@ -577,7 +584,7 @@
             Listen on Spotify
             <img
               loading="lazy"
-              class="text-white animate-bounce"
+              class="text-white animate-bounce w-6 aspect-square"
               src="./public/icon/zelda.svg"
               alt="Logo"
             />
@@ -600,6 +607,9 @@
       </div>
     </footer>
     <script async type="module" src="./main.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
   </body>
 </html>
